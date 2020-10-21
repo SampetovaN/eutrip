@@ -7,7 +7,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "gulp": "4.0.x",
-    "gulp-less": "4.0.x",
+    "gulp-sass": "^4.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-postcss": "8.0.x",
@@ -18,9 +18,9 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "fix": "eclint fix source/less/blocks/*.less",
+    "fix": "eclint fix source/sass/blocks/*.scss",
     "build": "gulp css",
     "start": "gulp start"
   },
