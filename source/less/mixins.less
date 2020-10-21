@@ -1,0 +1,76 @@
+.text-sets(@size;@height;@weight:normal) {
+  font-size: @size;
+  line-height: @height;
+  font-weight: @weight;
+}
+
+.text-color-sets(@size;@height;@color;@weight:normal) {
+  .text-sets(@size;@height);
+  color: @color;
+}
+
+.sets-paragraph(@size;@height) {
+  .text-color-sets(@size;@height;@paragraph-color);
+  font-family: "Arial", sans-serif;
+  text-transform: none;
+}
+
+.list-refresh() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fieldset-fresh() {
+  border: 0;
+  margin: 0;
+}
+
+.placeholder-style() {
+  &::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    color: @placeholder-text-color;
+    text-transform: uppercase;
+  }
+}
+
+.pick-label() {
+  .text-color-sets(16px;18px;@label-color);
+
+  &:active {
+    color: fade(@label-color, 30%);
+  }
+}
+
+.input-border () {
+  outline: 0;
+  border: 1px solid @border-input-color;
+
+  &:active,
+  &:focus {
+    border: 2px solid @border-input-color-active;
+  }
+
+  &--error {
+    border: 2px solid @border-input-color-error;
+  }
+}
+
+.last-child-margin() {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// временный миксин
+.set-outline (@color:black) {
+  outline: 2px solid @color;
+}
+
+.set-border() {
+  &:first-child {
+    border-top: 1px solid @product-item-border;
+  }
+  border-bottom: 1px solid @product-item-border;
+}
