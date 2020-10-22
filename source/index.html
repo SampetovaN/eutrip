@@ -17,8 +17,8 @@
       <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия меню"></button>
       <!--  main-nav__nav-list--closed - меню закрыто  main-nav__nav-list - меню открыто (состояние по умолчанию)-->
       <ul class="main-nav__nav-list site-list">
-        <li class="site-list__item"><a href="">О путешествии</a></li>
-        <li class="site-list__item"><a href="">Цены</a></li>
+        <li class="site-list__item"><a href="#places">О путешествии</a></li>
+        <li class="site-list__item"><a href="#price">Цены</a></li>
         <li class="site-list__item site-list__item--desktop"><img class="site-list__phone-icon" src="img/phone.svg"
                                                                   width="30" height="30" alt="Логотип Way">
           <a href="tel:+749978468446">+7 (499) -784-684-46</a></li>
@@ -32,10 +32,10 @@
       <h1 class="intro__title">Путешествие по Европе</h1>
       <p class="intro__desc">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
         потрясающая красота природы.</p>
-      <button class="button button--orange intro__button">Смотреть тур</button>
+      <a class="button button--orange intro__button" href="#tourinfo">Смотреть тур</a>
     </div>
   </section>
-  <section class="places">
+  <section class="places" id="places">
     <div class="places__wrapper">
       <div class="places__text">
         <h2 class="places__title">Места посещения</h2>
@@ -43,53 +43,77 @@
       </div>
       <ul class="places__list countries">
         <li class="countries__item">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/aleyna-rentz-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/aleyna-rentz-laptop.jpg">
-            <img class="countries__image" src="img/aleyna-rentz-mobile.jpg" width="288" height="425" alt="Греция">
-          </picture>
+          <a class="countries__link" href="#greece">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/aleyna-rentz-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/aleyna-rentz-laptop.jpg">
+              <img class="countries__image" src="img/aleyna-rentz-mobile.jpg" width="288" height="425" alt="Греция">
+            </picture>
+          </a>
+          <div class="countries__block countries__block--hoover">
+            <p class="countries__text">Смотреть подробнее</p>
+          </div>
           <h3 class="countries__name">Греция</h3>
         </li>
         <li class="countries__item">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/polina-rytova-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/polina-rytova-laptop.jpg">
-            <img class="countries__image" src="img/polina-rytova-mobile.jpg" width="288" height="425" alt="Албания">
-          </picture>
+          <a class="countries__link" href="#albany">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/polina-rytova-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/polina-rytova-laptop.jpg">
+              <img class="countries__image" src="img/polina-rytova-mobile.jpg" width="288" height="425" alt="Албания">
+            </picture>
+          </a>
+          <div class="countries__block countries__block--hoover">
+            <p class="countries__text">Смотреть подробнее</p>
+          </div>
           <h3 class="countries__name">Албания</h3>
         </li>
         <li class="countries__item">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/milana-jovanov-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/milana-jovanov-laptop.jpg">
-            <img class="countries__image" src="img/milana-jovanov-mobile.jpg" width="288" height="425" alt="Македония">
-          </picture>
-
+          <a class="countries__link" href="#macedonia">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/milana-jovanov-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/milana-jovanov-laptop.jpg">
+              <img class="countries__image" src="img/milana-jovanov-mobile.jpg" width="288" height="425"
+                   alt="Македония">
+            </picture>
+          </a>
+          <div class="countries__block countries__block--hoover">
+            <p class="countries__text">Смотреть подробнее</p>
+          </div>
           <h3 class="countries__name">Македония</h3>
         </li>
         <li class="countries__item">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/hanna-bezsonova-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/hanna-bezsonova-laptop.jpg">
-            <img class="countries__image" src="img/hanna-bezsonova-mobile.jpg" width="288" height="425"
-                 alt="Черногория">
-          </picture>
-
+          <a class="countries__link" href="#montenegro">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/hanna-bezsonova-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/hanna-bezsonova-laptop.jpg">
+              <img class="countries__image" src="img/hanna-bezsonova-mobile.jpg" width="288" height="425"
+                   alt="Черногория">
+            </picture>
+          </a>
+          <div class="countries__block countries__block--hoover">
+            <p class="countries__text">Смотреть подробнее</p>
+          </div>
           <h3 class="countries__name">Черногория</h3>
         </li>
         <li class="countries__item">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/robert-thiemann-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/robert-thiemann-laptop.jpg">
-            <img class="countries__image" src="img/robert-thiemann-mobile.jpg" width="288" height="425"
-                 alt="Черногория">
-          </picture>
+          <a class="countries__link" href="#croatia">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="img/robert-thiemann-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/robert-thiemann-laptop.jpg">
+              <img class="countries__image" src="img/robert-thiemann-mobile.jpg" width="288" height="425"
+                   alt="Хорватия">
+            </picture>
+          </a>
+          <div class="countries__block countries__block--hoover">
+            <p class="countries__text">Смотреть подробнее</p>
+          </div>
           <h3 class="countries__name">Хорватия</h3>
         </li>
       </ul>
     </div>
   </section>
-  <section class="tourinfo">
+  <section class="tourinfo" id="tourinfo">
     <h2 class="visually-hidden">Подробная информация о турах</h2>
     <ul class="tourinfo__list-name">
       <li class="tourinfo__name-item tourinfo__name-item--mobile tourinfo__name-item--laptop">
@@ -109,7 +133,7 @@
       <li>
     </ul>
     <ul class="tourinfo__list">
-      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop">
+      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop" id="greece">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Греция</h3>
@@ -123,7 +147,7 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/aleyna-rentz-desktop.jpg">
+            <source media="(min-width: 1024px)" srcset="img/aleyna-rentz-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/aleyna-rentz-laptop.jpg">
             <img class="brief__image" src="img/aleyna-rentz-mobile.jpg" width="288" height="425" alt="Греция">
           </picture>
@@ -139,7 +163,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop">
+      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop" id="albany">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Албания</h3>
@@ -151,7 +175,7 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/polina-rytova-desktop.jpg">
+            <source media="(min-width: 1024px)" srcset="img/polina-rytova-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/polina-rytova-laptop.jpg">
             <img class="brief__image" src="img/polina-rytova-mobile.jpg" width="288" height="425" alt="Албания">
           </picture>
@@ -167,7 +191,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--laptop">
+      <li class="tourinfo__item tourinfo__item--laptop" id="macedonia">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Македония</h3>
@@ -177,7 +201,7 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/milana-jovanov-desktop.jpg">
+            <source media="(min-width: 1024px)" srcset="img/milana-jovanov-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/milana-jovanov-laptop.jpg">
             <img class="brief__image" src="img/milana-jovanov-mobile.jpg" width="288" height="425" alt="Македония">
           </picture>
@@ -193,7 +217,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--laptop">
+      <li class="tourinfo__item tourinfo__item--laptop" id="montenegro">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Черногория</h3>
@@ -203,7 +227,7 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/robert-thiemann-desktop.jpg">
+            <source media="(min-width: 1024px)" srcset="img/robert-thiemann-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/robert-thiemann-laptop.jpg">
             <img class="brief__image" src="img/robert-thiemann-mobile.jpg" width="288" height="425" alt="Черногория">
           </picture>
@@ -218,7 +242,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item">
+      <li class="tourinfo__item" id="croatia">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Хорватия</h3>
@@ -229,7 +253,7 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/robert-thiemann-desktop.jpg">
+            <source media="(min-width: 1024px)" srcset="img/robert-thiemann-desktop.jpg">
             <source media="(min-width: 768px)" srcset="img/robert-thiemann-laptop.jpg">
             <img class="brief__image" src="img/robert-thiemann-mobile.jpg" width="288" height="425" alt="Хорватия">
           </picture>
@@ -247,7 +271,7 @@
       </li>
     </ul>
   </section>
-  <section class="price">
+  <section class="price" id="price">
     <div class="price__text">
       <h2 class="price__title">Цены</h2>
       <p class="price__desc">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших
@@ -292,18 +316,21 @@
   <section class="consult">
     <h2 class="consult__title">У Вас остались вопросы?</h2>
     <p class="consult__desc">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-    <form class="consult__form form" method="post" action="/">
-      <label class="visually-hidden" for="phone">Телефон:</label>
-      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
-          fill="#FE7865"/>
-      </svg>
-      <input class="form__phone" type="tel" name="phone" id="phone" placeholder="Введите 10 цифр номера">
-      <label class="visually-hidden" for="email">Электронная почта:</label>
-      <input class="form__email" type="email" name="email" id="email" placeholder="E-mail">
-      <button class="button button--orange form__button" type="submit">Отправить</button>
-    </form>
+    <ul class="form__input-list">
+      <li class="form__input">
+        <label class="visually-hidden" for="phone">Телефон:</label>
+        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
+            fill="#FE7865"/>
+        </svg>
+        <input class="form__phone" type="tel" name="phone" id="phone" placeholder="Введите 10 цифр номера">
+      </li>
+      <li class="form__input">
+        <label class="visually-hidden" for="email">Электронная почта:</label>
+        <input class="form__email" type="email" name="email" id="email" placeholder="E-mail">
+      </li>
+    </ul>
   </section>
 </main>
 <footer class="footer">
@@ -346,5 +373,32 @@
     </nav>
   </div>
 </footer>
+<section class="visually-hidden buy">
+  <h2>Купить тур</h2>
+  <form class="buy__form form" method="post" action="/">
+    <ul class="form__input-list">
+    <li class="form__input">
+      <label class="visually-hidden" for="phone-buy">Телефон:</label>
+      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
+          fill="#FE7865"/>
+      </svg>
+      <input class="form__phone" type="tel" name="phone" id="phone-buy" placeholder="Введите 10 цифр номера">
+    </li>
+    <li class="form__input">
+      <label class="visually-hidden" for="email-buy">Электронная почта:</label>
+      <input class="form__email" type="email" name="email" id="email-buy" placeholder="E-mail">
+    </li>
+    </ul>
+    <button class="button button--orange form__button" type="submit">Отправить</button>
+  </form>
+</section>
+<section class="visually-hidden buy-success">
+  <div class="buy-success__wrapper">
+  <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
+    <p class="buy-success__message">Форма успешно отправлена, спасибо! :)</p>
+  </div>
+</section>
 </body>
 </html>
