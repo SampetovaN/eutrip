@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Way: Путешествие по Европе</title>
+  <link rel="preload" href="fonts/montserratregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat700.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -116,16 +120,16 @@
   <section class="tourinfo" id="tourinfo">
     <h2 class="visually-hidden">Подробная информация о турах</h2>
     <ul class="tourinfo__list-name">
-      <li class="tourinfo__name-item tourinfo__name-item--mobile tourinfo__name-item--laptop">
+      <li class="tourinfo__name-item tourinfo__name-item--active">
         <button class="tourinfo__button">Греция</button>
       <li>
-      <li class="tourinfo__name-item tourinfo__name-item--mobile tourinfo__name-item--laptop">
+      <li class="tourinfo__name-item">
         <button class="tourinfo__button">Албания</button>
       <li>
-      <li class="tourinfo__name-item tourinfo__name-item--laptop">
+      <li class="tourinfo__name-item">
         <button class="tourinfo__button">Македония</button>
       <li>
-      <li class="tourinfo__name-item tourinfo__name-item--laptop">
+      <li class="tourinfo__name-item">
         <button class="tourinfo__button">Черногория</button>
       <li>
       <li class="tourinfo__name-item">
@@ -133,7 +137,7 @@
       <li>
     </ul>
     <ul class="tourinfo__list">
-      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop" id="greece">
+      <li class="tourinfo__item" id="greece">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Греция</h3>
@@ -163,7 +167,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--mobile tourinfo__item--laptop" id="albany">
+      <li class="tourinfo__item" id="albany">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Албания</h3>
@@ -191,7 +195,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--laptop" id="macedonia">
+      <li class="tourinfo__item" id="macedonia">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Македония</h3>
@@ -217,7 +221,7 @@
           </div>
         </div>
       </li>
-      <li class="tourinfo__item tourinfo__item--laptop" id="montenegro">
+      <li class="tourinfo__item" id="montenegro">
         <article class="tourinfo__brief brief">
           <div class="brief__desc">
             <h3 class="brief__title">Черногория</h3>
@@ -227,9 +231,9 @@
             <button class="button button-orange brief__button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source media="(min-width: 1024px)" srcset="img/robert-thiemann-desktop.jpg">
-            <source media="(min-width: 768px)" srcset="img/robert-thiemann-laptop.jpg">
-            <img class="brief__image" src="img/robert-thiemann-mobile.jpg" width="288" height="425" alt="Черногория">
+            <source media="(min-width: 1024px)" srcset="img/hanna-bezsonova-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/hanna-bezsonova-laptop.jpg">
+            <img class="brief__image" src="img/hanna-bezsonova-mobile.jpg" width="288" height="425" alt="Черногория">
           </picture>
         </article>
         <div class="tourinfo__feedback feedback">
@@ -377,26 +381,26 @@
   <h2>Купить тур</h2>
   <form class="buy__form form" method="post" action="/">
     <ul class="form__input-list">
-    <li class="form__input">
-      <label class="visually-hidden" for="phone-buy">Телефон:</label>
-      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
-          fill="#FE7865"/>
-      </svg>
-      <input class="form__phone" type="tel" name="phone" id="phone-buy" placeholder="Введите 10 цифр номера">
-    </li>
-    <li class="form__input">
-      <label class="visually-hidden" for="email-buy">Электронная почта:</label>
-      <input class="form__email" type="email" name="email" id="email-buy" placeholder="E-mail">
-    </li>
+      <li class="form__input">
+        <label class="visually-hidden" for="phone-buy">Телефон:</label>
+        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
+            fill="#FE7865"/>
+        </svg>
+        <input class="form__phone" type="tel" name="phone" id="phone-buy" placeholder="Введите 10 цифр номера">
+      </li>
+      <li class="form__input">
+        <label class="visually-hidden" for="email-buy">Электронная почта:</label>
+        <input class="form__email" type="email" name="email" id="email-buy" placeholder="E-mail">
+      </li>
     </ul>
     <button class="button button--orange form__button" type="submit">Отправить</button>
   </form>
 </section>
 <section class="visually-hidden buy-success">
   <div class="buy-success__wrapper">
-  <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
+    <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
     <p class="buy-success__message">Форма успешно отправлена, спасибо! :)</p>
   </div>
 </section>
