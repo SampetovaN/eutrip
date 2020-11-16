@@ -1,0 +1,9 @@
+.countries {
+  @include list-refresh;
+}
+
+.countries__name {
+  @include text-sets(24px,29px,500);
+  color: #2C2E3F;
+}
+

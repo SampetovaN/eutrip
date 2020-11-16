@@ -1,12 +1,24 @@
 body {
-  @include text-sets(14px,18px);
   padding: 0;
+  margin: 0;
+  min-width: $width-desktop;
   font-family: "Montserrat", "Arial", sans-serif;
-  text-transform: uppercase;
   box-sizing: border-box;
+  @include text-sets(14px,18px);
   background-color: $background-color;
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    min-width: $width-mobile;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    min-width: $width-tablet;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

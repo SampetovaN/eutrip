@@ -1,0 +1,11 @@
+.trips__title {
+  @include text-sets(18px,32px,600);
+  color: #141517;
+}
+.trips__item {
+  @include text-sets(14px,17px,normal);
+  color: rgba(#141517, 0.5);
+}
+.trips__list {
+  @include list-refresh;
+}

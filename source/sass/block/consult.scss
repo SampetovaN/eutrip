@@ -1,0 +1,17 @@
+.consult {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    background-color: #FBF8F8;
+  }
+  @media (min-width: $width-tablet) {
+    background-color: #FFFFFF;
+  }
+}
+.consult__title {
+  @include text-sets(25px,32px,600);
+  color: #141517;
+}
+.consult__desc {
+  @include text-sets(16px,24px,normal);
+  color: #141517;
+}
+

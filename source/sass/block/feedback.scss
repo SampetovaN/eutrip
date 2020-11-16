@@ -1,0 +1,19 @@
+.feedback__title {
+  color: #2C2E3F;
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    @include text-sets(20px,24px,500)
+  }
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.feedback__desc {
+  @include text-sets(14px,28px,normal);
+  color: rgba(#2C2E3F, 0.7);
+}
+.feedback__name {
+  @include text-sets(16px,24px,500);
+  font-family: "Poppins", sans-serif;
+  color: #2C2E3F;
+}

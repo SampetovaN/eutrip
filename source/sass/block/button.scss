@@ -1,0 +1,21 @@
+.button {
+  @include text-sets(12px,14px,700);
+  color: #ffffff;
+  background-color: #FE7865;
+  &:hover,
+  &:active {
+    color: #F17D4B;
+  }
+  text-transform: uppercase;
+  font: inherit;
+  text-align: center;
+  border: none;
+  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+    @include text-sets(10px,12px,500);
+    width: 288px;
+
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    width: 250px;
+  }
+}

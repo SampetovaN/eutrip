@@ -1,0 +1,8 @@
+.business__title {
+  @include text-sets(18px,32px,600);
+  color: #141517;
+}
+.business__desc {
+  @include text-sets(14px,23px,normal);
+  color: rgba(#141517, 0.5);
+}

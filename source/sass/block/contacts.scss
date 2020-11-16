@@ -1,0 +1,18 @@
+.contacts__title {
+  @include text-sets(18px,32px,600);
+  color: #141517;
+}
+.contacts__item {
+  @include text-sets(14px,17px,normal);
+  text-decoration: underline;
+  a {
+    color: #FE7865;
+  }
+  &--phone {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+.contacts__list {
+  @include list-refresh;
+}

@@ -1,0 +1,9 @@
+.form__input-list {
+  @include list-refresh;
+}
+.form__field {
+  &::placeholder {
+    @include text-sets(14px,17px,normal);
+    color: #141517;
+  };
+}

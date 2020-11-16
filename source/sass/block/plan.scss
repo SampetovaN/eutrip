@@ -1,0 +1,32 @@
+.plan__title {
+  @include text-sets(24px,34px,600);
+  &--ordinary {
+    color: rgba(#141517, 0.7);
+  }
+  color: #FE7865;
+
+}
+
+.plan__cost {
+  @include text-sets(25px,34px,700);
+  &--ordinary {
+    color: rgba(#141517, 0.7);
+  }
+  color: #FE7865;
+}
+
+.plan__desc {
+  @include text-sets(16px,24px,normal);
+  color: #2C2E3F;
+}
+
+.plan__item {
+  @include text-sets(16px,32px,normal);
+  color: #2C2E3F;
+}
+.plan__points {
+  @include list-refresh;
+}
+.plan__button {
+  width: 288px;
+}

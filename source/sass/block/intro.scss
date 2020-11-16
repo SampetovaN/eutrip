@@ -1,0 +1,20 @@
+.intro__title {
+  @include text-sets(55px,80px,600);
+  color: #ffffff;
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+}
+.intro__desc {
+  @include text-sets(16px,27px,normal);
+  color: #ffffff;
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    color: #2C2E3F;
+  }
+}
