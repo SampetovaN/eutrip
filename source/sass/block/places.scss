@@ -1,6 +1,20 @@
 .places__title {
-  @include text-sets(55px,80px,600);
+  @include text-sets(3.8em,80px,600);
   color: #2C2E3F;
+  width: 30%;
+  position: relative;
+  margin: 0 0 5.7%;
+
+  &::after {
+    content: "";
+    width: 12vw;
+    position: absolute;
+    height: 3px;
+    background-color: #FE7865;
+    bottom: -32px;
+    left: 0;
+  }
+
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 45px;
@@ -12,6 +26,12 @@
 }
 
 .places__desc {
-  @include text-sets(16px,28px,normal);
+  @include text-sets(1.1em,28px,normal);
   color: rgba(#2C2E3F, 0.7);
+  width: 30%;
+  margin: 0 0 5%;
+}
+.places__wrapper {
+  margin: 0 auto;
+  padding: 0 19.5%;
 }

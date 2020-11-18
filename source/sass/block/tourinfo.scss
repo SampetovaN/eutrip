@@ -1,5 +1,9 @@
+.tourinfo__wrapper {
+  margin: 0 auto;
+  padding: 0 19.5%;
+}
 .tourinfo__button {
-  @include text-sets(20px,24px,500);
+  @include text-sets(1.4em,1.1em,500);
   border: none;
   background-color: transparent;
   color: rgba(#2C2E3F, 0.3);
@@ -12,6 +16,18 @@
 }
 .tourinfo__list-name {
   @include list-refresh;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+  &::after {
+    content: "";
+    width: 47vw;
+    position: absolute;
+    height: 2px;
+    top: 35px;
+    background-color: rgba(44, 46, 63, 0.3);
+  }
 }
 
 .tourinfo__list {

@@ -1,12 +1,11 @@
 .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
   }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    justify-content: space-between;
   }
 }
 

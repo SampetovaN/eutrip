@@ -1,24 +1,30 @@
 .site-list {
-  @include text-sets(20px,24px);
   @include list-refresh;
-  width: 479px;
+  display: flex;
+  flex-grow: 0;
+  align-items: center;
+  //width: 425px;
+  //justify-content: space-between;
+
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    @include list-refresh;
     @include text-sets(20px,28px,600);
-    width: 100%;
   }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    flex-direction: row;
     @include text-sets(18px,24px);
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-grow: 0;
-    width: 440px;
   }
 }
 
 .site-list__item {
+  @include text-sets(14px,17px,500);
+   margin-right: 41px;
+  &:nth-child(2) {
+     margin-right: 94px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   a {
+
     color: $nav-link-color-desktop;
     margin: 0 auto;
     &:hover,
@@ -31,6 +37,7 @@
     }
   }
   &--desktop {
+    @include text-sets(18px,32px,normal);
     a {
       color: #FE7865;
       text-decoration: underline;
