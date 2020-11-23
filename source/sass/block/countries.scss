@@ -8,6 +8,11 @@
   @media (width: 1920px) {
     margin: 0 -25px;
   }
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 .countries__item {
   position: relative;
@@ -49,6 +54,16 @@
       z-index: 1;
     }
   }
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    &:hover {
+      ~.countries__hoover {
+         @include reset-el;
+      }
+      &::after {
+        @include reset-el;
+      }
+    }
+  }
 }
 .countries__hoover {
  display: none;
@@ -65,15 +80,21 @@
   width: 215px;
   background-color: #ffffff;
   z-index: 5;
-  bottom: 0;
-  margin-left: 68px;
+  bottom: 1.1%;
+  margin: 0 68px;
   padding: 20px 0;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    margin: 0 13%;
+  }
 }
 .countries__name {
   @include text-sets(1.7em,29px,500);
   color: #2C2E3F;
   text-align: center;
   margin: 0;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    @include text-sets(24px,29px,500);
+  }
 }
 
 

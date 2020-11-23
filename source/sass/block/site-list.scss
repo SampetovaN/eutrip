@@ -1,10 +1,5 @@
 .site-list {
   @include list-refresh;
-  display: flex;
-  flex-grow: 0;
-  align-items: center;
-  width: 41%;
-  justify-content: space-between;
 
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     @include text-sets(20px,28px,600);
@@ -20,7 +15,7 @@
     margin-right: 0;
   }
   a {
-
+    display: block;
     color: $nav-link-color-desktop;
     margin: 0 auto;
     &:hover,
@@ -48,8 +43,17 @@
     }
   }
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    padding: 23px 0 21px;
+    padding: 17px 16px 17px 35px;
     display: flex;
+    background-color: #E5E5E5;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    &:first-child {
+      margin-top: 134px;
+      margin-bottom: 30px;
+    }
 
     &--desktop {
       display: none;
@@ -57,7 +61,8 @@
 
     a {
       @include set-link-nav($nav-link-color-mobile);
-      margin: 0 auto;
+      margin: 0 auto 0 0;
+      background-color: #E5E5E5;
     }
   }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {

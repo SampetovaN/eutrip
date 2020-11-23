@@ -8,8 +8,10 @@
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     background-image: url("../img/aleyna-rentz-background-laptop.jpg");
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    background-image: url("../img/aleyna-rentz-background-mobile.jpg");
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    background-image: none;
+    background-color: transparent;
+    min-height: auto;
   }
 }
 @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
@@ -22,11 +24,14 @@
     background-image: url("../img/aleyna-rentz-background-laptop@2x.jpg");
   }
 }
-@media (min-width: $width-mobile) and (max-width: $max-width-mobile) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+@media (min-width: $width-mobile) and (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .intro {
-    background-image: url("../img/aleyna-rentz-background-mobile@2x.jpg");
+    background-image: none;
+
   }
 }
+
+
 .intro__wrapper {
   margin: 0 auto;
 }
@@ -34,30 +39,63 @@
   max-width: 20%;
   padding-left: 55.9%;
   padding-top: 9.9%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    padding: 0;
+    max-width: none;
+  }
 }
 .intro__title {
   margin: 0;
   @include text-sets(3.9em,80px,600);
   color: #ffffff;
   margin-bottom: 7%;
+  padding: 0;
+
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 81px 49px;
+    text-align: center;
+    background-image: url("../img/aleyna-rentz-background-mobile.jpg");
+    background-size: cover;
+    min-height: auto;
+    background-color: lightskyblue;
+  }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 45px;
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    font-size: 24px;
-    line-height: 36px;
+  @media (min-width: $width-tablet)  {
+    background-color: transparent;
+    background-image: none;
   }
 
 }
+@media (min-width: $width-mobile) and (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro__title {
+    background-image: url("../img/aleyna-rentz-background-mobile@2x.jpg");
+  }
+}
+@media (min-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro__title {
+    background-color: transparent;
+  }
+}
+
 .intro__desc {
   margin: 0;
   @include text-sets(1.1em,27px,normal);
   color: #ffffff;
   margin-bottom: 17%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    @include text-sets(16px,27px,normal);
     color: #2C2E3F;
+    background-color: white;
+    margin: 0 auto 20px;
+    padding: 0 16px;
+    text-align: center;
   }
+
 }
 .intro__button {
   padding: 8% 51% 8% 12%;
@@ -71,5 +109,12 @@
     content: "";
     top: 37%;
     right: 10%;
+  }
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    padding: 19px 145px 19px 40px   ;
+    box-sizing: border-box;
+    width: 288px;
+    display: block;
+    margin: 0 auto 108px;
   }
 }

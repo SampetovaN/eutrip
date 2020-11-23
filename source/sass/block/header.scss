@@ -1,4 +1,15 @@
+.header {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    background-color: #ffffff;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    background-color: #fe7865;
+  }
+}
 .header__wrapper {
   margin: 0 auto;
   padding: 2% 20.2% 1.4% 19.5%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    padding: 0;
+  }
 }
