@@ -1,15 +1,37 @@
 .intro {
   background-image: url("../img/aleyna-rentz-background-desktop.jpg");
   background-repeat: no-repeat;
+  background-color: lightskyblue;
   background-size: cover;
   min-height: 860px;
   margin-bottom: 10.4%;
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    background-image: url("../img/aleyna-rentz-background-laptop.jpg");
+  }
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    background-image: url("../img/aleyna-rentz-background-mobile.jpg");
+  }
+}
+@media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro {
+    background-image: url("../img/aleyna-rentz-background-desktop@2x.jpg");
+  }
+}
+@media (min-width: $width-tablet) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro {
+    background-image: url("../img/aleyna-rentz-background-laptop@2x.jpg");
+  }
+}
+@media (min-width: $width-mobile) and (max-width: $max-width-mobile) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro {
+    background-image: url("../img/aleyna-rentz-background-mobile@2x.jpg");
+  }
 }
 .intro__wrapper {
   margin: 0 auto;
 }
 .intro__text {
-  max-width: 375px;
+  max-width: 20%;
   padding-left: 55.9%;
   padding-top: 9.9%;
 }
@@ -38,5 +60,16 @@
   }
 }
 .intro__button {
-  padding: 28px 185px 28px 41px;
+  padding: 8% 51% 8% 12%;
+  position: relative;
+  &::after {
+    position: absolute;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    width: 3vh;
+    height: 3vh;
+    content: "";
+    top: 37%;
+    right: 10%;
+  }
 }

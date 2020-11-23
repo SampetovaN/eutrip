@@ -1,10 +1,10 @@
 .button {
-  @include text-sets(12px,14px,700);
+  @include text-sets(1.2em,1.2em,700);
   color: #ffffff;
   background-color: #FE7865;
   &:hover,
   &:active {
-    color: #F17D4B;
+    background-color: #F17D4B;
   }
   text-transform: uppercase;
   font: inherit;

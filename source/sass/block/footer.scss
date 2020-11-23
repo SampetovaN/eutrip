@@ -1,3 +1,33 @@
+.footer__wrapper {
+  margin: 0 auto;
+  padding: 0 19.5%;
+}
 .footer__list {
-  @include list-refresh;
+  display: flex;
+  flex-direction: row;
+}
+.footer__item {
+  width: 33%;
+  position: relative;
+  &::after {
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 26vh;
+    background-color: #D7D9DF;
+    bottom: 14%;
+    right: -4%;
+  }
+  box-sizing: border-box;
+  &:last-child {
+    position: initial;
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      background-color: transparent;
+      bottom: 0;
+      right: 0;
+    }
+  }
 }

@@ -1,11 +1,30 @@
 .trips__title {
-  @include text-sets(18px,32px,600);
+  @include text-sets(1.4em,1.5em,600);
   color: #141517;
+  margin-left: 3%;
+}
+.trips__column {
+  @include list-refresh;
+  &:first-child {
+    margin-left: 15%;
+  }
+  margin-left: 0;
 }
 .trips__item {
-  @include text-sets(14px,17px,normal);
+ display: flex;
+  flex-direction: column;
+  margin-right: 12%;
+  &:last-child {
+    margin-right: 0;
+    width: 32%;
+  }
+}
+.trips__town {
+  @include text-sets(1.1em,2em,normal);
   color: rgba(#141517, 0.5);
 }
 .trips__list {
   @include list-refresh;
+  display: flex;
+  //justify-content: space-between;
 }

@@ -1,0 +1,11 @@
+.map-zone {
+  background-image: url("../img/background-map.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .map-zone {
+    background-image: url("../img/background-map@2x.png");
+    background-size: 50% auto;
+  }
+}

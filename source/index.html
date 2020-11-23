@@ -8,7 +8,7 @@
   <link rel="preload" href="fonts/montserrat500.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat600.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat700.woff2" as="font" crossorigin="anonymous">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <header class="header">
@@ -21,7 +21,8 @@
         </picture>
       </a>
       <!-- main-nav__toggle--closed - меню закрыто/иконка гамбургера  main-nav__toggle--opened - меню открыто/иконка крестика-->
-      <button class="main-nav__toggle main-nav__toggle--opened" type="button" aria-label="Кнопка открытия меню"></button>
+      <button class="main-nav__toggle main-nav__toggle--opened" type="button"
+              aria-label="Кнопка открытия меню"></button>
       <!--  main-nav__nav-list--closed - меню закрыто  main-nav__nav-list - меню открыто (состояние по умолчанию)-->
       <ul class="main-nav__nav-list site-list">
         <li class="site-list__item"><a href="#places">О путешествии</a></li>
@@ -53,9 +54,13 @@
         <li class="countries__item">
           <a class="countries__link" href="#greece">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.jpg">
-              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.jpg">
-              <img class="countries__image" src="img/aleyna-rentz-desktop.jpg" width="350" height="430" alt="Греция">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.webp 1x, img/aleyna-rentz-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.webp 1x, img/aleyna-rentz-laptop@2x.jpg 2x">
+              <source type="image/webp" srcset="img/aleyna-rentz-desktop.webp 1x, img/aleyna-rentz-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.jpg 1x, img/aleyna-rentz-mobile@2x.jpg 2x">
+              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.jpg 1x, img/aleyna-rentz-laptop@2x.jpg 2x">
+              <img class="countries__image" src="img/aleyna-rentz-desktop.jpg"  srcset="img/aleyna-rentz-desktop.jpg 1x, img/aleyna-rentz-desktop@2x.jpg 2x" width="350" height="430" alt="Греция">
             </picture>
           </a>
           <div class="countries__hoover">
@@ -68,9 +73,13 @@
         <li class="countries__item">
           <a class="countries__link" href="#albany">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/polina-rytova-mobile.jpg">
-              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.jpg">
-              <img class="countries__image" src="img/polina-rytova-desktop.jpg" width="350" height="430" alt="Албания">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/polina-rytova-mobile.webp 1x, img/polina-rytova-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.webp 1x, img/polina-rytova-laptop@2x.jpg 2x">
+              <source type="image/webp" srcset="img/polina-rytova-desktop.webp 1x, img/polina-rytova-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/polina-rytova-mobile.jpg 1x, img/polina-rytova-mobile@2x.jpg 2x">
+              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.jpg 1x, img/polina-rytova-laptop@2x.jpg 2x">
+              <img class="countries__image" src="img/polina-rytova-desktop.jpg"  srcset="img/polina-rytova-desktop.jpg 1x, img/polina-rytova-desktop@2x.jpg 2x" width="350" height="430" alt="Албания">
             </picture>
           </a>
           <div class="countries__hoover">
@@ -83,9 +92,13 @@
         <li class="countries__item">
           <a class="countries__link" href="#macedonia">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.jpg">
-              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.jpg">
-              <img class="countries__image" src="img/milana-jovanov-desktop.jpg" width="350" height="430" alt="Македония">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.webp 1x, img/milana-jovanov-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.webp 1x, img/milana-jovanov-laptop@2x.jpg 2x">
+              <source type="image/webp" srcset="img/milana-jovanov-desktop.webp 1x, img/milana-jovanov-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.jpg 1x, img/milana-jovanov-mobile@2x.jpg 2x">
+              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.jpg 1x, img/milana-jovanov-laptop@2x.jpg 2x">
+              <img class="countries__image" src="img/milana-jovanov-desktop.jpg"  srcset="img/milana-jovanov-desktop.jpg 1x, img/milana-jovanov-desktop@2x.jpg 2x" width="350" height="430" alt="Македония">
             </picture>
           </a>
           <div class="countries__hoover">
@@ -98,9 +111,13 @@
         <li class="countries__item">
           <a class="countries__link" href="#montenegro">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.jpg">
-              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.jpg">
-              <img class="countries__image" src="img/hanna-bezsonova-desktop.jpg" width="350" height="430" alt="Черногория">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.webp 1x, img/hanna-bezsonova-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.webp 1x, img/hanna-bezsonova-laptop@2x.jpg 2x">
+              <source type="image/webp" srcset="img/hanna-bezsonova-desktop.webp 1x, img/hanna-bezsonova-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.jpg 1x, img/hanna-bezsonova-mobile@2x.jpg 2x">
+              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.jpg 1x, img/hanna-bezsonova-laptop@2x.jpg 2x">
+              <img class="countries__image" src="img/hanna-bezsonova-desktop.jpg"  srcset="img/hanna-bezsonova-desktop.jpg 1x, img/hanna-bezsonova-desktop@2x.jpg 2x" width="350" height="430" alt="Черногория">
             </picture>
           </a>
           <div class="countries__hoover">
@@ -113,9 +130,13 @@
         <li class="countries__item">
           <a class="countries__link" href="#croatia">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.jpg">
-              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.jpg">
-              <img class="countries__image" src="img/robert-thiemann-desktop.jpg" width="350" height="430" alt="Хорватия">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.webp 1x, img/robert-thiemann-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.webp 1x, img/robert-thiemann-laptop@2x.jpg 2x">
+              <source type="image/webp" srcset="img/robert-thiemann-desktop.webp 1x, img/robert-thiemann-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.jpg 1x, img/robert-thiemann-mobile@2x.jpg 2x">
+              <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.jpg 1x, img/robert-thiemann-laptop@2x.jpg 2x">
+              <img class="countries__image" src="img/robert-thiemann-desktop.jpg"  srcset="img/robert-thiemann-desktop.jpg 1x, img/robert-thiemann-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия">
             </picture>
           </a>
           <div class="countries__hoover">
@@ -130,31 +151,37 @@
   </section>
   <div class="map-zone">
     <section class="tourinfo" id="tourinfo">
-      <div class="tourinfo__wrapper">
+      <div class="tourinfo__button-wrapper">
         <h2 class="visually-hidden">Подробная информация о турах</h2>
-        <ul class="tourinfo__list-name">
-          <li class="tourinfo__name-item">
-            <button class="tourinfo__button tourinfo__button--active">Греция</button>
-          <li>
-          <li class="tourinfo__name-item">
-            <button class="tourinfo__button">Албания</button>
-          <li>
-          <li class="tourinfo__name-item">
-            <button class="tourinfo__button">Македония</button>
-          <li>
-          <li class="tourinfo__name-item">
-            <button class="tourinfo__button">Черногория</button>
-          <li>
-          <li class="tourinfo__name-item">
-            <button class="tourinfo__button">Хорватия</button>
-          <li>
-        </ul>
+        <div class="tourinfo__buttons-block">
+          <ul class="tourinfo__list-name">
+            <li class="tourinfo__name-item">
+              <button class="tourinfo__button tourinfo__button--active">Греция</button>
+            </li>
+            <li class="tourinfo__name-item">
+              <button class="tourinfo__button">Албания</button>
+            </li>
+            <li class="tourinfo__name-item">
+              <button class="tourinfo__button">Македония</button>
+            </li>
+            <li class="tourinfo__name-item">
+              <button class="tourinfo__button">Черногория</button>
+            </li>
+            <li class="tourinfo__name-item">
+              <button class="tourinfo__button">Хорватия</button>
+            </li>
+          </ul>
+          <div class="tourinfo__line"></div>
+        </div>
+      </div>
+      <div class="tourinfo__list-wrapper">
         <ul class="tourinfo__list">
-          <li class="tourinfo__item" id="greece">
+          <li class="tourinfo__item tourinfo__item--active" id="greece">
             <article class="tourinfo__brief brief">
-              <div class="brief__desc">
+              <div class="brief__text">
                 <h3 class="brief__title">Греция</h3>
-                <p class="brief__desc">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на
+                <p class="brief__desc">На севере Греции находится один из крупнейших комплексов монастырей,
+                  расположенных на
                   вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь
                   основная
                   цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы,
@@ -163,16 +190,23 @@
                   Метеоры.</p>
                 <button class="button  brief__button">Купить тур сейчас</button>
               </div>
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.jpg">
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.jpg">
-                <img class="brief__image" src="img/aleyna-rentz-desktop.jpg" width="350" height="430" alt="Греция">
-              </picture>
+              <div class="brief__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.webp 1x, img/aleyna-rentz-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.webp 1x, img/aleyna-rentz-laptop@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/aleyna-rentz-desktop-1.webp 1x, img/aleyna-rentz-desktop-1@2x.webp 2x">
+
+                  <source media="(max-width: 767px)" srcset="img/aleyna-rentz-mobile.jpg 1x, img/aleyna-rentz-mobile@2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/aleyna-rentz-laptop.jpg 1x, img/aleyna-rentz-laptop@2x.jpg 2x">
+                  <img class="countries__image" src="img/aleyna-rentz-desktop-1.jpg"  srcset="img/aleyna-rentz-desktop-1.jpg 1x, img/aleyna-rentz-desktop-1@2x.jpg 2x" width="438" height="597" alt="Греция">
+                </picture>
+              </div>
             </article>
             <div class="tourinfo__feedback feedback">
               <h4 class="feedback__title">Отзывы</h4>
               <p class="feedback__desc">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
-                высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто
+                высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как
+                будто
                 стоишь на краю света!</p>
               <div class="feedback__person">
                 <img class="feedback__photo" src="img/vlada.jpg" width="38" height="38" alt="Фото Влады Голициной">
@@ -182,18 +216,24 @@
           </li>
           <li class="tourinfo__item" id="albany">
             <article class="tourinfo__brief brief">
-              <div class="brief__desc">
+              <div class="brief__text">
                 <h3 class="brief__title">Албания</h3>
                 <p class="brief__desc">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и
-                  удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и
-                  слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
+                  удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно
+                  белоснежный и
+                  слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые
+                  до
                   такого мелкого состояния.</p>
                 <button class="button  brief__button">Купить тур сейчас</button>
               </div>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/polina-rytova-mobile.jpg">
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.jpg">
-                <img class="brief__image" src="img/polina-rytova-desktop.jpg" width="350" height="430" alt="Албания">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/polina-rytova-mobile.webp 1x, img/polina-rytova-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.webp 1x, img/polina-rytova-laptop@2x.jpg 2x">
+                <source type="image/webp" srcset="img/polina-rytova-desktop-1.webp 1x, img/polina-rytova-desktop-1@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/polina-rytova-mobile.jpg 1x, img/polina-rytova-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/polina-rytova-laptop.jpg 1x, img/polina-rytova-laptop@2x.jpg 2x">
+                <img class="countries__image" src="img/polina-rytova-desktop-1.jpg"  srcset="img/polina-rytova-desktop-1.jpg 1x, img/polina-rytova-desktop-1@2x.jpg 2x" width="430" height="596" alt="Албания">
               </picture>
             </article>
             <div class="tourinfo__feedback feedback">
@@ -208,22 +248,29 @@
           </li>
           <li class="tourinfo__item" id="macedonia">
             <article class="tourinfo__brief brief">
-              <div class="brief__desc">
+              <div class="brief__text">
                 <h3 class="brief__title">Македония</h3>
-                <p class="brief__desc">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно
-                  красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину
+                <p class="brief__desc">В Македонии нашей целью будет посетить Палаошник, который расположился в
+                  удивительно
+                  красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на
+                  вершину
                   горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
                 <button class="button  brief__button">Купить тур сейчас</button>
               </div>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.jpg">
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.jpg">
-                <img class="brief__image" src="img/milana-jovanov-desktop.jpg" width="350" height="430" alt="Македония">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.webp 1x, img/milana-jovanov-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.webp 1x, img/milana-jovanov-laptop@2x.jpg 2x">
+                <source type="image/webp" srcset="img/milana-jovanov-desktop-1.webp 1x, img/milana-jovanov-desktop-1@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/milana-jovanov-mobile.jpg 1x, img/milana-jovanov-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/milana-jovanov-laptop.jpg 1x, img/milana-jovanov-laptop@2x.jpg 2x">
+                <img class="countries__image" src="img/milana-jovanov-desktop-1.jpg"  srcset="img/milana-jovanov-desktop-1.jpg 1x, img/milana-jovanov-desktop-1@2x.jpg 2x" width="430" height="596" alt="Македония">
               </picture>
             </article>
             <div class="tourinfo__feedback feedback">
               <h4 class="feedback__title">Отзывы</h4>
-              <p class="feedback__desc">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору
+              <p class="feedback__desc">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в
+                гору
                 был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после
                 долгого пути в гору.</p>
               <div class="feedback__person">
@@ -234,22 +281,28 @@
           </li>
           <li class="tourinfo__item" id="montenegro">
             <article class="tourinfo__brief brief">
-              <div class="brief__desc">
+              <div class="brief__text">
                 <h3 class="brief__title">Черногория</h3>
-                <p class="brief__desc">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых
+                <p class="brief__desc">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
+                  некоторых
                   местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона
                   составляет 80 км.</p>
                 <button class="button  brief__button">Купить тур сейчас</button>
               </div>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.jpg">
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.jpg">
-                <img class="brief__image" src="img/hanna-bezsonova-desktop.jpg" width="350" height="430" alt="Черногория">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.webp 1x, img/hanna-bezsonova-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.webp 1x, img/hanna-bezsonova-laptop@2x.jpg 2x">
+                <source type="image/webp" srcset="img/hanna-bezsonova-desktop-1.webp 1x, img/hanna-bezsonova-desktop-1@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/hanna-bezsonova-mobile.jpg 1x, img/hanna-bezsonova-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/hanna-bezsonova-laptop.jpg 1x, img/hanna-bezsonova-laptop@2x.jpg 2x">
+                <img class="countries__image" src="img/hanna-bezsonova-desktop-1.jpg"  srcset="img/hanna-bezsonova-desktop-1.jpg 1x, img/hanna-bezsonova-desktop-1@2x.jpg 2x" width="430" height="596" alt="Черногория">
               </picture>
             </article>
             <div class="tourinfo__feedback feedback">
               <h4 class="feedback__title">Отзывы</h4>
-              <p class="feedback__desc">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах
+              <p class="feedback__desc">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
+                фильмах
                 :) Всем советую</p>
               <div class="feedback__person">
                 <img class="feedback__photo" src="img/nastya.jpg" width="38" height="38" alt="Фото Анастасии Мей">
@@ -259,27 +312,34 @@
           </li>
           <li class="tourinfo__item" id="croatia">
             <article class="tourinfo__brief brief">
-              <div class="brief__desc">
+              <div class="brief__text">
                 <h3 class="brief__title">Хорватия</h3>
-                <p class="brief__desc">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет
+                <p class="brief__desc">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир
+                  увлечет
                   вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными
                   скульптурами
                   — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
                 <button class="button  brief__button">Купить тур сейчас</button>
               </div>
               <picture>
-                <source media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.jpg">
-                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.jpg">
-                <img class="brief__image" src="img/robert-thiemann-desktop.jpg" width="350" height="430" alt="Хорватия">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.webp 1x, img/robert-thiemann-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.webp 1x, img/robert-thiemann-laptop@2x.jpg 2x">
+                <source type="image/webp" srcset="img/robert-thiemann-desktop-1.webp 1x, img/robert-thiemann-desktop-1@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/robert-thiemann-mobile.jpg 1x, img/robert-thiemann-mobile@2x.jpg 2x">
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/robert-thiemann-laptop.jpg 1x, img/robert-thiemann-laptop@2x.jpg 2x">
+                <img class="countries__image" src="img/robert-thiemann-desktop-1.jpg"  srcset="img/robert-thiemann-desktop-1.jpg 1x, img/robert-thiemann-desktop-1@2x.jpg 2x" width="430" height="596" alt="Хорватия">
               </picture>
             </article>
             <div class="tourinfo__feedback feedback">
               <h4 class="feedback__title">Отзывы</h4>
-              <p class="feedback__desc">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору
+              <p class="feedback__desc">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в
+                гору
                 был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после
                 долгого пути в гору.</p>
               <div class="feedback__person">
-                <img class="feedback__photo" src="img/vladimir.jpg" width="38" height="38" alt="Фото Владимира Мулицини">
+                <img class="feedback__photo" src="img/vladimir.jpg" width="38" height="38"
+                     alt="Фото Владимира Мулицини">
                 <span class="feedback__name">Владимир Мулицин</span>
               </div>
             </div>
@@ -288,136 +348,154 @@
       </div>
     </section>
     <section class="price" id="price">
-      <div class="price__text">
-        <h2 class="price__title">Цены</h2>
-        <p class="price__desc">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших
-          потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
-        <div class="price__contacts">
-          <span class="price__moto">Свяжитесь с нами</span>
-          <a class="price__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+      <div class="price__wrapper">
+        <div class="price__text">
+          <h2 class="price__title">Цены</h2>
+          <p class="price__desc">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от
+            Ваших
+            потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
+          <div class="price__contacts">
+            <span class="price__moto">Свяжитесь с нами</span>
+            <a class="price__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </div>
+        </div>
+        <ul class="price__plans">
+          <li class="price__item plan">
+            <div class="plan__text">
+              <div class="plan__header">
+                <h3 class="plan__title">Комплексный</h3>
+                <span class="plan__cost">$1999</span>
+              </div>
+              <p class="plan__desc">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            </div>
+            <ul class="plan__points">
+              <li class="plan__item">Разработанный маршрут с гидом группы</li>
+              <li class="plan__item">Перелет, трансфер и проживание в отелях</li>
+              <li class="plan__item">Завтраки, ужины в отелях и ланчи на природе</li>
+              <li class="plan__item">Экскурсии по удивительно красивым местам Европы</li>
+            </ul>
+            <button class="button plan__button">Купить тур сейчас</button>
+          </li>
+          <li class="price__item plan plan--ordinary">
+            <div class="plan__text plan__text--ordinary">
+              <div class="plan__header">
+                <h3 class="plan__title plan__title--ordinary">Экономный</h3>
+                <span class="plan__cost plan__cost--ordinary">$1399</span>
+              </div>
+              <p class="plan__desc plan__desc--ordinary">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+            </div>
+            <ul class="plan__points plan__points--ordinary">
+              <li class="plan__item plan__item--ordinary">Разработанный маршрут с гидом группы</li>
+              <li class="plan__item plan__item--ordinary">Перелет и трансфер</li>
+              <li class="plan__item plan__item--ordinary">Проживание в хостелах при отелях</li>
+              <li class="plan__item plan__item--ordinary">Только завтраки в отелях</li>
+              <li class="plan__item plan__item--ordinary">Экскурсии по удивительно красивым местам Европы</li>
+            </ul>
+            <button class="button plan__button">Купить тур сейчас</button>
+          </li>
+        </ul>
+      </div>
+      <div class="visually-hidden buy">
+        <button class="close" type="button" aria-label="Кнопка закрытия формы"></button>
+        <h2 class="buy__title">Купить тур</h2>
+        <form class="buy__form form" method="post" action="/">
+          <ul class="buy-form__input-list">
+            <li class="buy-form__input">
+              <label class="visually-hidden" for="phone-buy">Телефон:</label>
+              <input class="buy-form__field buy-form__field--phone" type="tel" name="phone" id="phone-buy"
+                     placeholder="+7 Введите 10 цифр номера">
+            </li>
+            <li class="buy-form__input">
+              <label class="visually-hidden" for="email-buy">Электронная почта:</label>
+              <input class="buy-form__field buy-form__field--email" type="email" name="email" id="email-buy" placeholder="E-mail">
+            </li>
+          </ul>
+          <button class="button buy-form__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="visually-hidden buy-success">
+        <button class="close buy-success__button" type="button" aria-label="Кнопка закрытия отправки формы"></button>
+        <div class="buy-success__wrapper">
+          <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
+          <p class="buy-success__message">Форма успешно отправлена, спасибо! :)</p>
         </div>
       </div>
-      <ul class="price__plans">
-        <li class="price__item plan">
-          <div class="plan__text">
-            <h3 class="plan__title">Комплексный</h3>
-            <span class="plan__cost">$1999</span>
-            <p class="plan__desc">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
-          </div>
-          <ul class="plan__points">
-            <li class="plan__item">Разработанный маршрут с гидом группы</li>
-            <li class="plan__item">Перелет, трансфер и проживание в отелях</li>
-            <li class="plan__item">Завтраки, ужины в отелях и ланчи на природе</li>
-            <li class="plan__item">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="button plan__button">Купить тур сейчас</button>
-        </li>
-        <li class="price__item plan plan--ordinary">
-          <div class="plan__text plan__text--ordinary">
-            <h3 class="plan__title plan__title--ordinary">Экономный</h3>
-            <span class="plan__cost plan__cost--ordinary">$1399</span>
-            <p class="plan__desc">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-          </div>
-          <ul class="plan__points">
-            <li class="plan__item plan__item--ordinary">Разработанный маршрут с гидом группы</li>
-            <li class="plan__item plan__item--ordinary">Перелет и трансфер</li>
-            <li class="plan__item plan__item--ordinary">Проживание в хостелах при отелях</li>
-            <li class="plan__item plan__item--ordinary">Только завтраки в отелях</li>
-            <li class="plan__item plan__item--ordinary">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="button plan__button">Купить тур сейчас</button>
-        </li>
-      </ul>
     </section>
   </div>
   <section class="consult">
-    <h2 class="consult__title">У Вас остались вопросы?</h2>
-    <p class="consult__desc">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-    <form class="consult__form form" method="post" action="/">
-    <ul class="form__input-list">
-      <li class="form__input">
-        <label class="visually-hidden" for="phone">Телефон:</label>
-        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
-            fill="#FE7865"/>
-        </svg>
-        <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="Введите 10 цифр номера">
-      </li>
-      <li class="form__input">
-        <label class="visually-hidden" for="email">Электронная почта:</label>
-        <input class="form__field" type="email" name="email" id="email" placeholder="E-mail">
-      </li>
-    </ul>
-    </form>
+    <div class="consult__wrapper">
+      <div class="consult__content">
+        <h2 class="consult__title">У Вас остались вопросы?</h2>
+        <p class="consult__desc">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+        <form class="consult__form form" method="post" action="/">
+          <ul class="form__input-list">
+            <li class="form__input">
+              <label class="visually-hidden" for="phone">Телефон:</label>
+              <input class="form__field form__field--phone" type="tel" name="phone" id="phone"
+                     placeholder="+7 Введите 10 цифр номера">
+            </li>
+            <li class="form__input">
+              <label class="visually-hidden" for="email">Электронная почта:</label>
+              <input class="form__field" type="email" name="email" id="email" placeholder="E-mail">
+            </li>
+          </ul>
+        </form>
+        <button class="button form__button" type="submit">Отправить</button>
+      </div>
+    </div>
   </section>
 </main>
 <footer class="footer">
-  <div class="wrapper footer__wrapper">
-    <ul class="footer__list">
-      <li class="footer__item trips">
+  <div class="footer__wrapper">
+    <div class="footer__list">
+      <section class="footer__item trips">
         <h2 class="trips__title">Следующие путешествия</h2>
         <ul class="trips__list">
-          <li class="trips__item">Марсель</li>
-          <li class="trips__item">Ним</li>
-          <li class="trips__item">Монпелье</li>
-          <li class="trips__item">Барселона</li>
-          <li class="trips__item">Пальма</li>
-          <li class="trips__item">Сардиния</li>
-          <li class="trips__item">Палермо</li>
-          <li class="trips__item">Катания</li>
-          <li class="trips__item">Неаполь</li>
-          <li class="trips__item">Рим</li>
-          <li class="trips__item">Корс</li>
-          <li class="trips__item">Ницца</li>
-          <li class="trips__item">Монако</li>
-          <li class="trips__item">Динь-ле-Бен</li>
-          <li class="trips__item">Гренобль</li>
+          <li class="trips__item">
+            <ul class="trips__column">
+              <li class="trips__town">Марсель</li>
+              <li class="trips__town">Ним</li>
+              <li class="trips__town">Монпелье</li>
+              <li class="trips__town">Барселона</li>
+              <li class="trips__town">Пальма</li>
+            </ul>
+          </li>
+          <li class="trips__item">
+            <ul class="trips__column">
+              <li class="trips__town">Сардиния</li>
+              <li class="trips__town">Палермо</li>
+              <li class="trips__town">Катания</li>
+              <li class="trips__town">Неаполь</li>
+              <li class="trips__town">Рим</li>
+            </ul>
+          </li>
+          <li class="trips__item">
+            <ul class="trips__column">
+              <li class="trips__town">Корс</li>
+              <li class="trips__town">Ницца</li>
+              <li class="trips__town">Монако</li>
+              <li class="trips__town">Динь-ле-Бен</li>
+              <li class="trips__town">Гренобль</li>
+            </ul>
+          </li>
         </ul>
-      </li>
-      <li class="footer__item contacts">
+      </section>
+      <section class="footer__item contacts">
         <h2 class="contacts__title">Наши контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__item contacts__item--email"><a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
           </li>
           <li class="contacts__item contacts__item--phone"><a href="tel:+749978468446">+7 (499) -784-684-46</a></li>
         </ul>
-      </li>
-      <li class="footer__item business">
+      </section>
+      <section class="footer__item business">
         <h2 class="business__title">Корпоративные путешествия</h2>
         <p class="business__desc">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры
           очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным
           времяпрепровождением</p>
-      </li>
-    </ul>
+      </section>
+    </div>
   </div>
 </footer>
-<section class="buy">
-  <h2 class="buy__title">Купить тур</h2>
-  <form class="buy__form form" method="post" action="/">
-    <ul class="form__input-list">
-      <li class="form__input">
-        <label class="visually-hidden" for="phone-buy">Телефон:</label>
-        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.519 6.028L3.434 4.158L4.998 5.161L5.542 4.243L3.893 3.393L5.542 2.543L4.998 1.608L3.434 2.611L3.519 0.740999H2.448L2.533 2.611L0.952 1.608L0.425 2.543L2.074 3.393L0.425 4.243L0.952 5.161L2.533 4.158L2.448 6.028H3.519Z"
-            fill="#FE7865"/>
-        </svg>
-        <input class="form__field form__field--phone" type="tel" name="phone" id="phone-buy" placeholder="Введите 10 цифр номера">
-      </li>
-      <li class="form__input">
-        <label class="visually-hidden" for="email-buy">Электронная почта:</label>
-        <input class="form__field form__field--email" type="email" name="email" id="email-buy" placeholder="E-mail">
-      </li>
-    </ul>
-    <button class="button form__button" type="submit">Отправить</button>
-  </form>
-</section>
-<section class="buy-success">
-  <div class="buy-success__wrapper">
-    <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
-    <p class="buy-success__message">Форма успешно отправлена, спасибо! :)</p>
-  </div>
-</section>
 </body>
 </html>

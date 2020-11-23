@@ -1,3 +1,56 @@
 .buy {
   background-color: #FBF8F8;
+  width: 728px;
+  height: 444px;
+  left: 32%;
+  z-index: 5;
+  top: 0;
+  position: absolute;
+  background-image: url("../img/buy-tour.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+
 }
+
+.buy__title {
+  @include text-sets(25px,42px,600);
+  color: #48494D;
+  margin-right: 124px;
+  margin-top: 79px;
+  margin-bottom: 50px;
+
+}
+
+.buy-form__input-list {
+  @include list-refresh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 42px;
+
+}
+.buy-form__input {
+  margin-bottom: 20px;
+  &::placeholder {
+    @include text-sets(14px, 17px, normal);
+    color: #141517;
+  }
+}
+.buy-form__field {
+  padding: 16px 15px;
+  width: 270px;
+  &--error {
+    border: #F17D4B solid 1px;
+  }
+}
+
+.buy-form__button {
+  width: 176px;
+  padding: 3% 2%;
+  display: block;
+  margin-left: 56px;
+}
+

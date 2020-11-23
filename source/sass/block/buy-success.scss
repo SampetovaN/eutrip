@@ -1,7 +1,23 @@
 .buy-success {
   background-color: #FBF8F8;
+  width: 728px;
+  height: 444px;
+  left: 32%;
+  z-index: 5;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .buy-success__message {
   @include text-sets(25px,42px,500);
   color: #48494D;
+  width: 400px;
+  text-align: center;
+  padding-top: 133px;
+}
+.buy-success__button {
+  text-align: right;
+  align-self: flex-end;
 }

@@ -1,8 +1,13 @@
 .business__title {
-  @include text-sets(18px,32px,600);
+  @include text-sets(1.4em,1.5em,600);
   color: #141517;
+  margin-left: 17%;
+  margin-bottom: 7%;
 }
 .business__desc {
-  @include text-sets(14px,23px,normal);
+  @include text-sets(1em,1.7em,normal);
   color: rgba(#141517, 0.5);
+  margin-left: 17%;
+  margin-bottom: 7%;
+  padding-right: 3%;
 }

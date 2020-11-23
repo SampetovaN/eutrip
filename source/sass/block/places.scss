@@ -1,5 +1,5 @@
 .places__title {
-  @include text-sets(3.8em,80px,600);
+  @include text-sets(3.8em,1.6em,600);
   color: #2C2E3F;
   width: 30%;
   position: relative;
@@ -11,7 +11,7 @@
     position: absolute;
     height: 3px;
     background-color: #FE7865;
-    bottom: -32px;
+    bottom: -21%;
     left: 0;
   }
 
@@ -29,7 +29,7 @@
   @include text-sets(1.1em,28px,normal);
   color: rgba(#2C2E3F, 0.7);
   width: 30%;
-  margin: 0 0 5%;
+  margin: 0 0 4.9%;
 }
 .places__wrapper {
   margin: 0 auto;

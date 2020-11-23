@@ -1,9 +1,33 @@
 .form__input-list {
   @include list-refresh;
+  display: flex;
+  margin: 0 5% 4%;
+}
+.form__input {
+  &:first-child {
+    margin-right: 13%;
+  }
 }
 .form__field {
+  padding: 6% 11% 6% 11%;
+  width: 98%;
+  box-sizing: content-box;
+  position: relative;
+  &:last-child {
+    padding-left: 8%;
+  }
   &::placeholder {
     @include text-sets(14px,17px,normal);
     color: #141517;
   };
+  &--error {
+    border: #F17D4B solid 1px;
+  }
+}
+
+.form__button {
+  width: 29%;
+  padding: 3% 2%;
+  display: block;
+  margin: 0 auto 8%;
 }

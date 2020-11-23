@@ -4,7 +4,7 @@ body {
   min-width: $width-desktop;
   font-family: "Montserrat", "Arial", sans-serif;
   box-sizing: border-box;
-  @include text-sets(14px,18px);
+  @include text-sets(0.7vw,18px);
   background-color: $background-color;
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     min-width: $width-mobile;

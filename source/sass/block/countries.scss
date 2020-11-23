@@ -4,11 +4,24 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-around;
-  margin: 0 -25px;
+  margin: 0;
+  @media (width: 1920px) {
+    margin: 0 -25px;
+  }
 }
 .countries__item {
   position: relative;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 7.8%;
+  @media (width: 1920px) {
+    &:nth-child(4) {
+      margin-left: 10%;
+    }
+    &:nth-child(5) {
+      margin-right: 10%;
+    }
+  }
 }
 
 .countries__link {

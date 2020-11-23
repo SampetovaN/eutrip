@@ -1,19 +1,49 @@
+.feedback {
+  position: absolute;
+  width: 28.9%;
+  background-color: #FFFFFF;
+  margin: 0;
+  top: 17%;
+  right: -6%;
+  padding: 2.9% 3.3%;
+}
+
 .feedback__title {
   color: #2C2E3F;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    @include text-sets(20px,24px,500)
+  margin: 0 0 11%;
+  @include text-sets(2em,1.4em,500);
+  position: relative;
+  &::after {
+    content: "";
+    width: 3.5vw;
+    position: absolute;
+    height: 2px;
+    background-color: #FE7865;
+    bottom: -37%;
+    left: -1%;
   }
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 36px;
   }
 }
 .feedback__desc {
-  @include text-sets(14px,28px,normal);
-  color: rgba(#2C2E3F, 0.7);
+  @include text-sets(1em,2.1em,normal);
+  color: rgba(44, 46, 63, 0.7);
+  margin: 0 0 9%;
 }
 .feedback__name {
-  @include text-sets(16px,24px,500);
+  @include text-sets(1.1em,2em,500);
   font-family: "Poppins", sans-serif;
   color: #2C2E3F;
+}
+.feedback__photo {
+  border-radius: 50%;
+  display: block;
+  margin-right: 4%;
+}
+.feedback__person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

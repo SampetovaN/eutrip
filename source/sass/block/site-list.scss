@@ -3,8 +3,8 @@
   display: flex;
   flex-grow: 0;
   align-items: center;
-  //width: 425px;
-  //justify-content: space-between;
+  width: 41%;
+  justify-content: space-between;
 
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     @include text-sets(20px,28px,600);
@@ -15,11 +15,7 @@
 }
 
 .site-list__item {
-  @include text-sets(14px,17px,500);
-   margin-right: 41px;
-  &:nth-child(2) {
-     margin-right: 94px;
-  }
+  @include text-sets(1em,1em,500);
   &:last-child {
     margin-right: 0;
   }
@@ -28,19 +24,27 @@
     color: $nav-link-color-desktop;
     margin: 0 auto;
     &:hover,
-    &:focus {
-      color: #FE7865;
-    }
-
+    &:focus,
     &:active {
       color: #FE7865;
     }
   }
   &--desktop {
     @include text-sets(18px,32px,normal);
+    position: relative;
+    padding-left: 10%;
     a {
       color: #FE7865;
       text-decoration: underline;
+    }
+    &::before {
+      background-image: url("../img/phone-orange.svg");
+      width: 6vh;
+      height: 6vh;
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      left: 1%;
     }
   }
   @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {

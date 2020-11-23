@@ -1,6 +1,22 @@
+.brief {
+  display: flex;
+  flex-direction: row;
+}
+
 .brief__title {
-  @include text-sets(55px,90px,600);
+  @include text-sets(4em,1.7em,600);
   color: #2C2E3F;
+  position: relative;
+  margin: 0 0 12%;
+  &::after {
+    content: "";
+    width: 9.2vw;
+    position: absolute;
+    height: 3px;
+    background-color: #FE7865;
+    bottom: -17%;
+    left: 0;
+  }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 45px;
@@ -13,6 +29,21 @@
   }
 }
 .brief__desc {
-  @include text-sets(16px,28px,normal);
+  @include text-sets(1.2em,177%,normal);
   color: rgba(#2C2E3F, 0.7);
+  margin: 0 0 12%;
 }
+
+.brief__text {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 7%;
+}
+.brief__button {
+  width: 64%;
+  padding: 8% 0;
+}
+
+
+
