@@ -1,16 +1,21 @@
 .price__wrapper {
-  margin: 0 auto;
-  padding: 0 19.5%;
   display: flex;
   flex-direction: row;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    flex-direction: column;
+  }
 }
 .price {
   position: relative;
 }
 .price__text {
-  order: 2;;
+  order: 2;
   margin-left: 23%;
   margin-top: 6%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    order: 0;
+    margin: 0;
+  }
 }
 .price__title {
   @include text-sets(4em,1.7em,600);
@@ -26,23 +31,42 @@
     bottom: -17%;
     left: 0;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
     font-size: 30px;
     line-height: 45px;
+
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
     font-size: 24px;
     line-height: 36px;
+    width: auto;
+    position: static;
+    text-align: center;
+    margin: 0 0 20px;
+    &::after {
+      content: "";
+      width: 0;
+      position: static;
+      height: 0;
+      background-color: transparent;
+    }
   }
 }
 .price__desc {
   @include text-sets(1.2em,1.7em,normal);
   color: rgba(#2C2E3F, 0.7);
   margin: 0 0 21% 3%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0 0 20px;
+    text-align: center;
+  }
 }
 .price__contacts {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .price__moto {
   @include text-sets(1.6em,1em,500);
@@ -50,8 +74,10 @@
   margin-bottom: 5.2%;
   text-align: center;
   margin-left: 6%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
     font-size: 18px;
+    line-height: 34px;
+    margin: 0 0 10px;
   }
 }
 .price__phone {
@@ -69,10 +95,20 @@
     top: 9%;
     left: 2%;
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
     font-size: 18px;
+    line-height: 32px;
     text-decoration: underline;
     color: #FE7865;
+    position: static;
+    margin: 0 0 40px;
+    padding: 0;
+    &::before {
+      width: 0;
+      background-image: none;
+      height: 0;
+      position: static;
+    }
   }
 }
 
@@ -81,6 +117,10 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 12%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
 
 

@@ -1,10 +1,16 @@
 .tourinfo__button-wrapper {
   margin: 0 auto;
   padding: 0 33.4% 0 19.5%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    padding: 0 16px;
+  }
 }
 .tourinfo__list-wrapper {
   margin: 0 auto;
   padding: 0 19.5%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    padding: 0;
+  }
 }
 .tourinfo__button {
   @include text-sets(1.4em,1.1em,500);
@@ -17,6 +23,9 @@
   &:hover,
   &:focus {
     color: #FE7865;
+  }
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    @include text-sets(20px,24px,500);
   }
 }
 .tourinfo__buttons-block {
@@ -34,25 +43,49 @@
   display: flex;
   margin-bottom: 1.2%;
   justify-content: space-between;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    overflow: hidden;
+    justify-content: unset;
+  }
+}
+.tourinfo__name-item {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+   margin-right: 100px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .tourinfo__list {
   @include list-refresh;
   display: flex;
-  //overflow: hidden;
   justify-content: space-between;
-  margin-bottom: 19%;
+  margin: 0 0 21%;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    margin: 0;
+  }
 }
 .tourinfo__item {
-  margin-right: 5%;
   position: relative;
   display: none;
   &--active {
     display: block;
+
+  }
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    position: static;
+    &--active {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 .tourinfo__brief {
   width: 58vw;
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+    width: auto;
+  }
 }
 
 

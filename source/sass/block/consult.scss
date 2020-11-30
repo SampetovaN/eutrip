@@ -7,13 +7,16 @@
   background-position-y: -29%;
   margin-bottom: 8%;
 
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
     background-color: #FBF8F8;
+    background-image: none;
+    position: static;
+    width: auto;
   }
   @media (min-width: $width-tablet) {
     background-color: #FFFFFF;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
     background-image: url("../img/anastasia-leonova-laptop.jpg");
   }
 }
@@ -23,15 +26,16 @@
     background-size: 50% auto;
   }
 }
-@media (min-width: $width-tablet) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+@media (min-width: $width-tablet) and (max-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .consult {
     background-image: url("../img/anastasia-leonova-laptop@2x.jpg");
     background-size: 50% auto;
   }
 }
-.consult__wrapper {
-  margin: 0 auto;
-  padding: 0 19.5%;
+@media (min-width: $width-mobile) and (max-width: $width-tablet)  and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .consult {
+    background-image: none;
+  }
 }
 
 .consult__title {
@@ -39,12 +43,22 @@
   color: #141517;
   text-align: center;
   margin: 9% 0 2%;
+  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0 0 20px;
+  }
 }
 .consult__desc {
   @include text-sets(1.2em,1.6em,normal);
   color: #141517;
   text-align: center;
   margin: 0 0 3%;
+  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 20px;
+  }
 }
 .consult__content {
   background-color: #FFFFFF;
@@ -54,7 +68,15 @@
   border-radius: 6px;
   padding: 0 1%;
   width: 32%;
-  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1)
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    box-shadow: none;
+    padding: 50px 0;
+    margin-bottom: 50px;
+  }
 }
 
 
