@@ -1,13 +1,12 @@
 .feedback {
-  background-image: none;
   padding: 0;
   position: static;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  background-image: none;
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       height: 432px;
@@ -15,8 +14,134 @@
       z-index: -1;
       top: 0;
     }
+    &--greece {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+      }
+    }
+    &--albany {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+      }
+    }
+    &--macedonia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+      }
+    }
+    &--montenegro {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+      }
+    }
+    &--croatia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+      }
+    }
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 432px;
+      width: 100%;
+      z-index: -1;
+      top: 0;
+    }
+    &--greece {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1.jpg");
+      }
+    }
+    &--albany {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1.jpg");
+      }
+    }
+    &--macedonia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1.jpg");
+      }
+    }
+    &--montenegro {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1.jpg");
+      }
+    }
+    &--croatia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1.jpg");
+      }
+    }
   }
 }
+@media (min-width: $width-mobile) and (max-width: $max-width-mobile) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi){
+  .feedback {
+    &--greece {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+
+    }
+    &--albany {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+    &--macedonia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+    &--montenegro {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+    &--croatia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+  }
+}
+
+@media (min-width: $width-tablet) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi){
+  .feedback {
+    &--greece {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1@2x.jpg");
+      }
+
+    }
+    &--albany {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1@2x.jpg");
+      }
+    }
+    &--macedonia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1@2x.jpg");
+      }
+    }
+    &--montenegro {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1@2x.jpg");
+      }
+    }
+    &--croatia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-tablet-1@2x.jpg");
+      }
+    }
+  }
+}
+
+
 .feedback__wrapper {
   position: absolute;
   width: 28.9%;
@@ -25,12 +150,22 @@
   right: -6%;
   padding: 2.9% 3.3%;
   background-color: #FFFFFF;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 268px;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    margin: 35px auto 45px;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 382px;
     box-sizing: border-box;
     padding: 50px 30px;
     margin: 35px auto 45px;
@@ -51,12 +186,17 @@
     bottom: -37%;
     left: -1%;
   }
-  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 36px;
-
+    padding-bottom: 5px;
+    border: none;
+    &::after {
+      width: 68px;
+      height: 1px;
+    }
   }
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     font-size: 20px;
     line-height: 24px;
     border-bottom: 1px solid #FE7865;
@@ -73,20 +213,31 @@
   color: rgba(44, 46, 63, 0.7);
   margin: 0 0 9%;
   text-align: unset;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     font-size: 14px;
     line-height: 28px;
     text-align: center;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: unset;
   }
 }
 .feedback__name {
   @include text-sets(1.1em,2em,500);
   font-family: "Poppins", sans-serif;
   color: #2C2E3F;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     font-size: 16px;
     line-height: 24px;
   }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 174px;
+  }
+
 }
 .feedback__photo {
   border-radius: 50%;
@@ -97,7 +248,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     flex-direction: column;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    flex-direction: row;
   }
 }

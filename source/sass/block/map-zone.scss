@@ -2,10 +2,18 @@
   background-image: url("../img/background-map.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+    background-image: none;
+  }
 }
 @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .map-zone {
     background-image: url("../img/background-map@2x.png");
     background-size: 50% auto;
+  }
+}
+@media (min-width: $width-mobile) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .map-zone {
+    background-image: none;
   }
 }

@@ -9,8 +9,6 @@
     flex-wrap: wrap;
     position: relative;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-  }
 }
 .main-nav__logo {
   display: block;
@@ -20,6 +18,11 @@
     margin-right: auto;
     padding-left: 16px;
     padding-top: 18px;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    margin-right: auto;
+    padding-left: 21px;
+    padding-top: 13px;
   }
 }
 
@@ -41,6 +44,13 @@
       background-image: url("../img/icon-menu-mobile.svg");
       background-size: 86%;
       background-position: 50%;
+    }
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    width: 72px;
+    height: 60px;
+    &--closed {
+      background-size: 50%;
     }
   }
 }

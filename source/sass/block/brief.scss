@@ -26,7 +26,7 @@
   height: auto;
   width: 41%;
   margin-top: -1%;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
     display: none;
   }
 }
@@ -50,6 +50,26 @@
     }
   }
 }
+@media (min-width: $width-mobile) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .brief__image-wrapper {
+    &--greece {
+      background-image: none;
+    }
+    &--albany {
+      background-image: none;
+    }
+    &--macedonia {
+      background-image: none;
+    }
+    &--montenegro {
+      background-image: none;
+    }
+    &--croatia {
+      background-image: none;
+    }
+  }
+}
+
 
 .brief__title {
   @include text-sets(4em,1.7em,600);
@@ -65,12 +85,19 @@
     bottom: -17%;
     left: 0;
   }
-  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     font-size: 30px;
     line-height: 45px;
+    margin: 0 0 20px;
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      background-color: transparent;
+    }
 
   }
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     font-size: 24px;
     line-height: 36px;
     position: static;
@@ -87,9 +114,14 @@
   color: rgba(#2C2E3F, 0.7);
   margin: 0 0 12%;
   text-align: unset;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     @include text-sets(16px,28px,normal);
     text-align: center;
+  }
+
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    @include text-sets(16px,28px,normal);
+    margin: 0 0 20px;
   }
 }
 
@@ -98,15 +130,27 @@
   flex-direction: column;
   width: 35%;
   margin-right: 7%;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
    width: auto;
     padding: 0 16px;
     align-items: center;
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    width: auto;
+    padding: 0 21px;
+    text-align: center;
   }
 }
 .brief__button {
   width: 64%;
   padding: 8% 0;
+  box-sizing: border-box;
+  margin: auto;
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    margin: 0 auto 30px;
+    width: 250px;
+    padding: 19px 0;
+  }
 }
 
 
