@@ -1,7 +1,10 @@
 .contacts {
   padding: 0;
-  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
+  @media  (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
     padding: 20px 0;
+  }
+  @media  (min-width: $width-tablet) and (max-width: $max-width-tablet)  {
+    padding: 0;
   }
 }
 .contacts__title {
@@ -9,11 +12,17 @@
   color: #141517;
   margin-left: 27%;
   margin-bottom: 7%;
-  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
+  @media  (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
     font-size: 18px;
     line-height: 32px;
     text-align: center;
     margin: 0 0 20px;
+  }
+  @media  (min-width: $width-tablet) and (max-width: $max-width-tablet)  {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    margin-left: 50px;
   }
 }
 .contacts__item {
@@ -63,11 +72,23 @@
       height: 6vh;
     }
   }
-
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
+    margin: 0 auto;
+    &--email {
+      margin: 0 auto 15px;
+    }
+  }
+  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+    margin-bottom: 15px;
+    margin-left: 50px;
+    &--email {
+      margin-bottom: 15px;
+      margin-left: 50px;
+    }
+  }
+  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
     font-size: 14px;
     line-height: 17px;
-    margin: 0 auto;
     text-align: unset;
     padding-left: 35px;
     &--phone {
@@ -81,16 +102,12 @@
       }
     }
     &--email {
-      margin: 0 auto 15px;
       &::before {
         background-image: url("../img/mail.svg");
         width: 26px;
         height: 20px;
       }
     }
-  }
-  @media (min-width: $width-mobile) and (max-width: $width-desktop - 1) {
-
     &--desktop {
       display: none;
     }
@@ -98,6 +115,7 @@
       display: block;
     }
   }
+
 }
 .contacts__list {
   @include list-refresh;

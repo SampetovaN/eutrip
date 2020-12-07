@@ -4,7 +4,7 @@
 .header__wrapper {
   margin: 0 auto;
   padding: 2% 20.2% 1.4% 19.5%;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
     padding: 0;
   }
 }
