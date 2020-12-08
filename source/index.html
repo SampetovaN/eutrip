@@ -11,6 +11,9 @@
   <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
 <header class="header">
   <div class="header__wrapper">
     <nav class="main-nav">
@@ -389,22 +392,25 @@
           </li>
         </ul>
       </div>
-      <div class="visually-hidden buy">
+      <div class="buy">
         <button class="close" type="button" aria-label="Кнопка закрытия формы"></button>
         <h2 class="buy__title">Купить тур</h2>
         <form class="buy__form form" method="post" action="/">
-          <ul class="buy-form__input-list">
-            <li class="buy-form__input">
-              <label class="visually-hidden" for="phone-buy">Телефон:</label>
-              <input class="buy-form__field buy-form__field--phone" type="tel" name="phone" id="phone-buy"
+          <div class="buy-form__input-list">
+            <div class="buy-form__input field">
+              <label class="field__label visually-hidden" for="phone-buy">Телефон:</label>
+              <input class="field__input field__input--phone" type="tel" name="phone" id="phone-buy"
                      placeholder="+7 Введите 10 цифр номера">
-            </li>
-            <li class="buy-form__input">
-              <label class="visually-hidden" for="email-buy">Электронная почта:</label>
-              <input class="buy-form__field buy-form__field--email" type="email" name="email" id="email-buy"
+              <svg class="field__icon" width="6" height="7">
+                <use xlink:href="#sprite-star"></use>
+              </svg>
+            </div>
+            <div class="buy-form__input field">
+              <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
+              <input class="field__input" type="email" name="email" id="email-buy"
                      placeholder="E-mail">
-            </li>
-          </ul>
+            </div>
+          </div>
           <button class="button buy-form__button" type="submit">Отправить</button>
         </form>
       </div>
@@ -423,17 +429,20 @@
         <h2 class="consult__title">У Вас остались вопросы?</h2>
         <p class="consult__desc">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
         <form class="consult__form form" method="post" action="/">
-          <ul class="form__input-list">
-            <li class="form__input">
-              <label class="visually-hidden" for="phone">Телефон:</label>
-              <input class="form__field form__field--phone" type="tel" name="phone" id="phone"
+          <div class="form__input-list">
+            <div class="form__input field">
+              <label class="field__label visually-hidden" for="phone" aria-label="Поле для ввода телефона">Телефон:</label>
+              <input class="field__input field__input--phone" type="tel" name="phone" id="phone"
                      placeholder="+7 Введите 10 цифр номера">
-            </li>
-            <li class="form__input">
-              <label class="visually-hidden" for="email">Электронная почта:</label>
-              <input class="form__field" type="email" name="email" id="email" placeholder="E-mail">
-            </li>
-          </ul>
+              <svg class="field__icon" width="6" height="7">
+                <use xlink:href="#sprite-star"></use>
+              </svg>
+            </div>
+            <div class="form__input field">
+              <label class="field__label visually-hidden" for="email" aria-label="Поле для ввода электоронной почты">Электронная почта:</label>
+              <input class="field__input" type="email" name="email" id="email" placeholder="E-mail">
+            </div>
+          </div>
         </form>
         <button class="button form__button" type="submit">Отправить</button>
       </div>

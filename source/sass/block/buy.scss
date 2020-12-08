@@ -6,13 +6,20 @@
   z-index: 5;
   top: 0;
   position: absolute;
-  background-image: url("../img/buy-tour.jpg");
-  background-repeat: no-repeat;
+  @media  (min-width: $width-desktop)  {
+    background-image: url("../img/buy-tour.jpg");
+    background-repeat: no-repeat;
+  }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
 
-
+@media (min-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .buy {
+    background-image: url("../img/buy-tour@2x.jpg");
+    background-size: 50% auto;
+  }
 }
 
 .buy__title {

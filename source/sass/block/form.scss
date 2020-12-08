@@ -8,46 +8,27 @@
     margin: 0;
   }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    justify-content: space-between;
+    margin: 0 0 4%;
   }
 
 }
 .form__input {
+  padding: 0;
+  margin: 0;
   &:first-child {
     margin-right: 13%;
   }
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
     &:first-child {
       margin-right: 0;
     }
     margin: 0 0 20px;
   }
-}
-.form__field {
-  padding: 6% 11% 6% 11%;
-  width: 98%;
-  box-sizing: content-box;
-  position: relative;
-  &:last-child {
-    padding-left: 8%;
-  }
-  &::placeholder {
-    @include text-sets(14px,17px,normal);
-    color: #141517;
-  };
-  &--error {
-    border: #F17D4B solid 1px;
-  }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    width: 100%;
-    box-sizing: border-box;
-  }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    padding: 6% 11%;
-    width: 98%;
-    &:last-child {
-      padding-left: 8%;
+    &:first-child {
+      margin-right: 60px;
     }
+
   }
 }
 
