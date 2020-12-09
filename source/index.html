@@ -392,33 +392,33 @@
           </li>
         </ul>
       </div>
-      <div class="buy">
+      <div class="visually-hidden buy buy--info">
         <button class="close" type="button" aria-label="Кнопка закрытия формы"></button>
         <h2 class="buy__title">Купить тур</h2>
         <form class="buy__form form" method="post" action="/">
           <div class="buy-form__input-list">
-            <div class="buy-form__input field">
+            <div class="buy-form__input field field-buy">
               <label class="field__label visually-hidden" for="phone-buy">Телефон:</label>
-              <input class="field__input field__input--phone" type="tel" name="phone" id="phone-buy"
+              <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy"
                      placeholder="+7 Введите 10 цифр номера">
               <svg class="field__icon" width="6" height="7">
                 <use xlink:href="#sprite-star"></use>
               </svg>
             </div>
-            <div class="buy-form__input field">
+            <div class="buy-form__input field field-buy">
               <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
-              <input class="field__input" type="email" name="email" id="email-buy"
+              <input class="field__input field-buy__input" type="email" name="email" id="email-buy"
                      placeholder="E-mail">
             </div>
           </div>
           <button class="button buy-form__button" type="submit">Отправить</button>
         </form>
       </div>
-      <div class="visually-hidden buy-success">
-        <button class="close buy-success__button" type="button" aria-label="Кнопка закрытия отправки формы"></button>
-        <div class="buy-success__wrapper">
+      <div class="buy success visually-hidden">
+        <button class="close success__button" type="button" aria-label="Кнопка закрытия отправки формы"></button>
+        <div class="success__wrapper">
           <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
-          <p class="buy-success__message">Форма успешно отправлена, спасибо! :)</p>
+          <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
         </div>
       </div>
     </section>

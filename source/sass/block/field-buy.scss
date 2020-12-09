@@ -1,0 +1,5 @@
+.field-buy__input {
+  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+    box-sizing: border-box;
+  }
+}

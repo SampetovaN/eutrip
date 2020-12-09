@@ -134,9 +134,11 @@
    width: auto;
     padding: 0 16px;
     align-items: center;
+    margin: 0 auto;
   }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     width: auto;
+    margin: 0 auto;
     padding: 0 21px;
     text-align: center;
   }
@@ -146,6 +148,11 @@
   padding: 8% 0;
   box-sizing: border-box;
   margin: auto;
+  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+    margin: 0 auto 20px;
+    padding: 19px 0;
+    width: 100%;
+  }
   @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
     margin: 0 auto 30px;
     width: 250px;

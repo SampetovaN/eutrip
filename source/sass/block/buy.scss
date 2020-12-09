@@ -2,32 +2,54 @@
   background-color: #FBF8F8;
   width: 728px;
   height: 444px;
-  left: 32%;
   z-index: 5;
-  top: 0;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
-  @media  (min-width: $width-desktop)  {
-    background-image: url("../img/buy-tour.jpg");
-    background-repeat: no-repeat;
+  &--info {
+    box-sizing: border-box;
+    @media  (min-width: $width-desktop)  {
+      background-image: url("../img/buy-tour.jpg");
+      background-repeat: no-repeat;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+      width: 320px;
+      height: 568px;
+    }
   }
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 @media (min-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .buy {
-    background-image: url("../img/buy-tour@2x.jpg");
-    background-size: 50% auto;
+    &--info {
+      background-image: url("../img/buy-tour@2x.jpg");
+      background-size: 50% auto;
+    }
   }
 }
 
 .buy__title {
   @include text-sets(25px,42px,600);
   color: #48494D;
-  margin-right: 124px;
+  margin-right: 107px;
   margin-top: 79px;
   margin-bottom: 50px;
+  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+    margin: 100px auto 50px;
+  }
+
+}
+.buy__form {
+  margin-right: 80px;
+  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+    width: 100%;
+    padding: 0 21px;
+    box-sizing: border-box;
+    margin: 0;
+  }
 
 }
 
@@ -36,28 +58,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 42px;
+  //margin-right: 42px;
+  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+   margin: 0;
+  }
 
 }
 .buy-form__input {
   margin-bottom: 20px;
-  &::placeholder {
-    @include text-sets(14px, 17px, normal);
-    color: #141517;
-  }
-}
-.buy-form__field {
-  padding: 16px 15px;
-  width: 270px;
-  &--error {
-    border: #F17D4B solid 1px;
-  }
 }
 
 .buy-form__button {
   width: 176px;
-  padding: 3% 2%;
+  padding: 18px 2%;
   display: block;
   margin-left: 56px;
+  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+    width: 100%;
+    padding: 19px 0;
+    margin: 0;
+  }
 }
 
