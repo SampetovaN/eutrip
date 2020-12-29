@@ -1,10 +1,39 @@
 .header {
-  background-color: #ffffff;
+  @media (max-width: $width-desktop) {
+    position: relative;
+
+    &--nojs {
+      position: static;
+
+      .main-nav__wrapper {
+        display: block;
+        position: static;
+      }
+
+      .main-nav__toggle-list {
+        display: none;
+      }
+
+      .main-nav__toggle {
+        display: none;
+      }
+
+      .main-nav__logo {
+        padding-top: 18px;
+      }
+
+      .main-nav__nav-list {
+        margin-top: 134px;
+      }
+    }
+  }
 }
+
 .header__wrapper {
   margin: 0 auto;
-  padding: 2% 20.2% 1.4% 19.5%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+  padding-top: 1.9%;
+
+  @media (max-width: $width-desktop) {
     padding: 0;
   }
 }

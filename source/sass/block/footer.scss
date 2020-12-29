@@ -2,39 +2,46 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  @media  (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
+
+  @media (max-width: $width-tablet) {
     flex-direction: column;
   }
-  @media  (min-width: $width-tablet) and (max-width: $max-width-tablet)  {
+
+  @media (max-width: $width-desktop) {
     flex-wrap: wrap;
   }
 }
+
 .footer__item {
   width: 33%;
   position: relative;
+
   &::after {
     content: "";
     width: 1px;
     position: absolute;
     height: 26vh;
-    background-color: #D7D9DF;
+    background-color: #d7d9df;
     bottom: 14%;
     right: -4%;
   }
+
   &:nth-child(2) {
     &::after {
       content: "";
       width: 1px;
       position: absolute;
       height: 26vh;
-      background-color: #D7D9DF;
+      background-color: #d7d9df;
       bottom: 14%;
       right: -4%;
     }
   }
   box-sizing: border-box;
+
   &:last-child {
     position: static;
+
     &::after {
       content: "";
       width: 0;
@@ -44,7 +51,8 @@
       right: 0;
     }
   }
-  @media  (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
+
+  @media (max-width: $width-tablet) {
     width: auto;
     margin: 0;
 
@@ -53,41 +61,47 @@
       width: 100%;
       position: absolute;
       height: 1px;
-      background-color: #D7D9DF;
+      background-color: #d7d9df;
       bottom: 0;
       right: 0;
     }
+
     &:nth-child(2) {
       &::after {
         content: "";
         width: 100%;
         position: absolute;
         height: 1px;
-        background-color: #D7D9DF;
+        background-color: #d7d9df;
         bottom: 0;
         right: 0;
       }
     }
   }
-  @media  (min-width: $width-tablet) and (max-width: $max-width-tablet)  {
+
+  @media (max-width: $width-desktop) {
     width: 50%;
+
     &:last-child {
       width: 100%;
       position: relative;
+
       &::after {
         content: "";
         width: 100%;
         position: absolute;
         height: 1px;
-        background-color: #D7D9DF;
+        background-color: #d7d9df;
         bottom: 0;
         right: 0;
         top: 0;
       }
     }
+
     &::after {
       height: 59vh;
     }
+
     &:nth-child(2) {
       &::after {
         content: "";

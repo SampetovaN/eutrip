@@ -2,5 +2,5 @@
 input[type="checkbox"],
 input[type="radio"],
 .visually-hidden {
-@include reset-el;
+  @include reset-el;
 }

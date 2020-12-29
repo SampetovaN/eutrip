@@ -3,32 +3,36 @@
   display: flex;
   flex-direction: row;
   margin: 0 5% 4%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     flex-direction: column;
     margin: 0;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     margin: 0 0 4%;
   }
-
 }
+
 .form__input {
   padding: 0;
   margin: 0;
+
   &:first-child {
     margin-right: 13%;
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     &:first-child {
       margin-right: 0;
     }
     margin: 0 0 20px;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     &:first-child {
       margin-right: 60px;
     }
-
   }
 }
 
@@ -37,12 +41,14 @@
   padding: 3% 2%;
   display: block;
   margin: 0 auto 8%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     width: 100%;
     padding: 15px 0;
     margin: 0 auto;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     width: 250px;
     padding: 15px 0;
     margin: 0 auto;

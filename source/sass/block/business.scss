@@ -1,33 +1,37 @@
 .business {
   padding: 0;
-  @media  (min-width: $width-mobile) and (max-width: $max-width-mobile)  {
+
+  @media (max-width: $width-tablet) {
     padding: 20px 0;
   }
-  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+
+  @media (max-width: $width-desktop) {
     padding: 30px 0;
   }
 }
+
 .business__title {
-  @include text-sets(1.4em,1.5em,600);
+  @include text-sets(18px,32px,600);
   color: #141517;
   margin-left: 17%;
   margin-bottom: 7%;
-  @media  (min-width: $width-mobile) and (max-width: $max-width-tablet)  {
+
+  @media (max-width: $width-desktop) {
     font-size: 18px;
     line-height: 32px;
     text-align: center;
     margin: 0 0 20px;
   }
 }
+
 .business__desc {
-  @include text-sets(1em,1.7em,normal);
+  @include text-sets(14px,23px,normal);
   color: rgba(#141517, 0.5);
   margin-left: 17%;
   margin-bottom: 7%;
   padding-right: 3%;
-  @media  (min-width: $width-mobile) and (max-width: $width-tablet)  {
-    font-size: 14px;
-    line-height: 23px;
+
+  @media (max-width: $width-desktop) {
     padding: 0;
     margin: 0;
     text-align: center;

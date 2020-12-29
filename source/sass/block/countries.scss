@@ -5,52 +5,57 @@
   align-content: center;
   justify-content: space-around;
   margin: 0;
+
   @media (width: 1920px) {
     margin: 0 -25px;
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
   }
 }
-.countries__image {
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    width: 288px;
-    height: auto;
-  }
-}
+
 .countries__item {
   position: relative;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 7.8%;
+
   @media (width: 1920px) {
     &:nth-child(4) {
       margin-left: 10%;
     }
+
     &:nth-child(5) {
       margin-right: 10%;
     }
+  }
+
+  @media (max-width: $width-desktop) {
+    margin: 0 auto;
   }
 }
 
 .countries__link {
   position: relative;
   display: block;
+
   &:hover {
-    ~.countries__hoover {
+    ~ .countries__hoover {
       display: block;
       position: absolute;
       top: 0;
-      border: #FFFFFF solid 1px;
+      border: #ffffff solid 1px;
       margin-left: 60px;
       padding: 30px 25px;
       margin-top: 152px;
       z-index: 2;
     }
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -60,24 +65,28 @@
       z-index: 1;
     }
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     &:hover {
-      ~.countries__hoover {
-         @include reset-el;
+      ~ .countries__hoover {
+        @include reset-el;
       }
+
       &::after {
         @include reset-el;
       }
     }
   }
 }
+
 .countries__hoover {
- display: none;
+  display: none;
 }
+
 .countries__more {
   @include text-sets(14px,17px,500);
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -87,27 +96,15 @@
   background-color: #ffffff;
   z-index: 5;
   bottom: 1.1%;
-  margin: 0 68px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   padding: 20px 0;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    margin: 0 13%;
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    margin: 0 36px;
-  }
 }
+
 .countries__name {
-  @include text-sets(1.7em,29px,500);
-  color: #2C2E3F;
+  @include text-sets(24px,29px,500);
+  color: #2c2e3f;
   text-align: center;
   margin: 0;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    @include text-sets(24px,29px,500);
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    @include text-sets(24px,29px,500);
-  }
 }
-
-
-

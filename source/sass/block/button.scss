@@ -1,21 +1,22 @@
 .button {
-  @include text-sets(1.2em,1.2em,700);
+  @include text-sets(12px,14px,600);
   color: #ffffff;
-  background-color: #FE7865;
+  background-color: #fe7865;
+
   &:hover,
   &:active {
-    background-color: #F17D4B;
+    background-color: #f17d4b;
   }
   text-transform: uppercase;
-  font: inherit;
   text-align: center;
   border: none;
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
-    @include text-sets(10px,12px,500);
-    width: 288px;
 
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+  @media (max-width: $width-desktop) {
+    @include text-sets(10px,12px,500);
     width: 250px;
+  }
+
+  @media (max-width: $width-tablet) {
+    width: 288px;
   }
 }

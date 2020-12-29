@@ -1,25 +1,29 @@
 .field {
   position: relative;
-   &--error {
-     >.field__input {
-       border: #F17D4B solid 1px;
-     }
-     &:before {
-       content: "Данные не верны";
-       position: absolute;
-       color: #F17D4B;
-       @include text-sets(12px, 14px, normal);
-       top: -16px;
-       left: 0;
-     }
-   }
 
+  &--error {
+    > .field__input {
+      border: #f17d4b solid 1px;
+    }
+
+    &::before {
+      content: "Данные не верны";
+      position: absolute;
+      color: #f17d4b;
+
+      @include text-sets(12px, 14px, normal);
+      top: -16px;
+      left: 0;
+    }
+  }
 }
+
 .field__icon {
   position: absolute;
   top: 6px;
   left: 15px;
 }
+
 .field__input {
   padding: 6% 11% 6% 8%;
   width: 98%;
@@ -29,7 +33,7 @@
     &:hover,
     &:active,
     &:focus {
-      ~.field__icon {
+      ~ .field__icon {
         display: none;
       }
     }
@@ -40,7 +44,7 @@
     color: #141517;
   }
 
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  @media (max-width: $width-tablet) {
     width: 100%;
     box-sizing: border-box;
 
@@ -48,9 +52,11 @@
       padding-left: 26px;
     }
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     padding: 15px 15px 16px;
     width: 100%;
+
     &--phone {
       padding-left: 26px;
     }

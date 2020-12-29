@@ -3,13 +3,15 @@
   flex-direction: column;
   align-items: center;
 }
+
 .success__message {
   @include text-sets(25px,42px,500);
-  color: #48494D;
+  color: #48494d;
   width: 400px;
   text-align: center;
   padding-top: 133px;
 }
+
 .success__button {
   text-align: right;
   align-self: flex-end;

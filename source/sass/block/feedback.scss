@@ -2,8 +2,10 @@
   padding: 0;
   position: static;
   background-image: none;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -14,34 +16,41 @@
       z-index: -1;
       top: 0;
     }
+
     &--greece {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
+
     &--albany {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
+
     &--macedonia {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
+
     &--montenegro {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
+
     &--croatia {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
@@ -52,26 +61,31 @@
       z-index: -1;
       top: 0;
     }
+
     &--greece {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1.jpg");
       }
     }
+
     &--albany {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1.jpg");
       }
     }
+
     &--macedonia {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1.jpg");
       }
     }
+
     &--montenegro {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1.jpg");
       }
     }
+
     &--croatia {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1.jpg");
@@ -79,29 +93,33 @@
     }
   }
 }
-@media (min-width: $width-mobile) and (max-width: $max-width-mobile) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi){
+
+@media (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .feedback {
     &--greece {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
       }
-
     }
+
     &--albany {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
       }
     }
+
     &--macedonia {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
       }
     }
+
     &--montenegro {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
       }
     }
+
     &--croatia {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
@@ -110,29 +128,32 @@
   }
 }
 
-@media (min-width: $width-tablet) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi){
+@media (max-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .feedback {
     &--greece {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
       }
-
     }
+
     &--albany {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
       }
     }
+
     &--macedonia {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
       }
     }
+
     &--montenegro {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
       }
     }
+
     &--croatia {
       &::after {
         background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
@@ -149,8 +170,9 @@
   top: 17%;
   right: -6%;
   padding: 2.9% 3.3%;
-  background-color: #FFFFFF;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  background-color: #ffffff;
+
+  @media (max-width: $width-tablet) {
     position: static;
     display: flex;
     flex-direction: column;
@@ -160,7 +182,8 @@
     padding: 50px 30px;
     margin: 35px auto 45px;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     position: static;
     display: flex;
     flex-direction: column;
@@ -173,85 +196,100 @@
 }
 
 .feedback__title {
-  color: #2C2E3F;
+  color: #2c2e3f;
   margin: 0 0 11%;
-  @include text-sets(2em,1.4em,500);
+
+  @include text-sets(30px,36px,500);
   position: relative;
+
   &::after {
     content: "";
     width: 3.5vw;
     position: absolute;
     height: 2px;
-    background-color: #FE7865;
+    background-color: #fe7865;
     bottom: -37%;
     left: -1%;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     font-size: 30px;
     line-height: 36px;
     padding-bottom: 5px;
     border: none;
+
     &::after {
       width: 68px;
       height: 1px;
     }
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     font-size: 20px;
     line-height: 24px;
-    border-bottom: 1px solid #FE7865;
+    border-bottom: 1px solid #fe7865;
     padding-bottom: 5px;
     position: static;
+
     &::after {
       width: 0;
       height: 0;
     }
   }
 }
+
 .feedback__desc {
-  @include text-sets(1em,2.1em,normal);
+  @include text-sets(14px,28px,normal);
   color: rgba(44, 46, 63, 0.7);
   margin: 0 0 9%;
   text-align: unset;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     font-size: 14px;
     line-height: 28px;
     text-align: center;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     font-size: 14px;
     line-height: 28px;
     text-align: unset;
   }
 }
+
 .feedback__name {
-  @include text-sets(1.1em,2em,500);
+  @include text-sets(16px,24px,500);
   font-family: "Poppins", sans-serif;
-  color: #2C2E3F;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  color: #2c2e3f;
+
+  @media (max-width: $width-tablet) {
     font-size: 16px;
     line-height: 24px;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     font-size: 16px;
     line-height: 24px;
     width: 174px;
   }
-
 }
+
 .feedback__photo {
   border-radius: 50%;
   display: block;
   margin-right: 4%;
 }
+
 .feedback__person {
   display: flex;
   flex-direction: row;
   align-items: center;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     flex-direction: column;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     flex-direction: row;
   }
 }

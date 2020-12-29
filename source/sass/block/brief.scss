@@ -1,32 +1,40 @@
 .brief {
   display: flex;
   flex-direction: row;
-  @media (min-width: $width-mobile) and (max-width: $width-tablet) {
+
+  @media (max-width: $width-tablet) {
     display: block;
   }
 }
+
 .brief__image-wrapper {
   &--greece {
     background-image: url("../img/aleyna-rentz-desktop-1.jpg");
   }
+
   &--albany {
     background-image: url("../img/polina-rytova-desktop-1.jpg");
   }
+
   &--macedonia {
     background-image: url("../img/milana-jovanov-desktop-1.jpg");
   }
+
   &--montenegro {
     background-image: url("../img/hanna-bezsonova-desktop-1.jpg");
   }
+
   &--croatia {
     background-image: url("../img/robert-thiemann-desktop-1.jpg");
   }
+
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
   width: 41%;
   margin-top: -1%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     display: none;
   }
 }
@@ -36,34 +44,43 @@
     &--greece {
       background-image: url("../img/aleyna-rentz-desktop-1@2x.jpg");
     }
+
     &--albany {
       background-image: url("../img/polina-rytova-desktop-1@2x.jpg");
     }
+
     &--macedonia {
       background-image: url("../img/milana-jovanov-desktop-1@2x.jpg");
     }
+
     &--montenegro {
       background-image: url("../img/hanna-bezsonova-desktop-1@2x.jpg");
     }
+
     &--croatia {
       background-image: url("../img/robert-thiemann-desktop-1@2x.jpg");
     }
   }
 }
-@media (min-width: $width-mobile) and (max-width: $max-width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+
+@media (max-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .brief__image-wrapper {
     &--greece {
       background-image: none;
     }
+
     &--albany {
       background-image: none;
     }
+
     &--macedonia {
       background-image: none;
     }
+
     &--montenegro {
       background-image: none;
     }
+
     &--croatia {
       background-image: none;
     }
@@ -72,35 +89,39 @@
 
 
 .brief__title {
-  @include text-sets(4em,1.7em,600);
-  color: #2C2E3F;
+  @include text-sets(55px, 90px, 600);
+  color: #2c2e3f;
   position: relative;
   margin: 0 0 12%;
+
   &::after {
     content: "";
     width: 9.2vw;
     position: absolute;
     height: 3px;
-    background-color: #FE7865;
+    background-color: #fe7865;
     bottom: -17%;
     left: 0;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     font-size: 30px;
     line-height: 45px;
     margin: 0 0 20px;
+
     &::after {
       content: "";
       width: 0;
       height: 0;
       background-color: transparent;
     }
-
   }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     font-size: 24px;
     line-height: 36px;
     position: static;
+
     &::after {
       content: "";
       width: 0;
@@ -109,18 +130,20 @@
     }
   }
 }
+
 .brief__desc {
-  @include text-sets(1.2em,177%,normal);
-  color: rgba(#2C2E3F, 0.7);
+  @include text-sets(16px, 28px, normal);
+  color: rgba(#2c2e3f, 0.7);
   margin: 0 0 12%;
   text-align: unset;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    @include text-sets(16px,28px,normal);
+
+  @media (max-width: $width-tablet) {
+    @include text-sets(16px, 28px, normal);
     text-align: center;
   }
 
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    @include text-sets(16px,28px,normal);
+  @media (max-width: $width-desktop) {
+    @include text-sets(16px, 28px, normal);
     margin: 0 0 20px;
   }
 }
@@ -130,35 +153,37 @@
   flex-direction: column;
   width: 35%;
   margin-right: 7%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-   width: auto;
+
+  @media (max-width: $width-tablet) {
+    width: auto;
     padding: 0 16px;
     align-items: center;
     margin: 0 auto;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     width: auto;
     margin: 0 auto;
     padding: 0 21px;
     text-align: center;
   }
 }
+
 .brief__button {
   width: 64%;
   padding: 8% 0;
   box-sizing: border-box;
   margin: auto;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+
+  @media (max-width: $width-tablet) {
     margin: 0 auto 20px;
     padding: 19px 0;
     width: 100%;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     margin: 0 auto 30px;
     width: 250px;
     padding: 19px 0;
   }
 }
-
-
-

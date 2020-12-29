@@ -1,75 +1,85 @@
 .tourinfo__button-wrapper {
   margin: 0 auto;
-  padding: 0 33.4% 0 19.5%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  padding-right: 40px * 1.7;
+
+  @media (max-width: $width-tablet) {
     padding: 0 16px;
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     padding: 0 16px;
   }
 }
+
 .tourinfo__list-wrapper {
   margin: 0 auto;
   padding: 0 19.5%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    padding: 0;
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     padding: 0;
   }
 }
+
 .tourinfo__button {
-  @include text-sets(1.4em,1.1em,500);
+  @include text-sets(20px,24px,500);
   border: none;
   background-color: transparent;
-  color: rgba(#2C2E3F, 0.3);
+  color: rgba(#2c2e3f, 0.3);
   padding: 0;
+
   &--active,
   &:active,
   &:hover,
   &:focus {
-    color: #FE7865;
-  }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    @include text-sets(20px,24px,500);
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    @include text-sets(20px,24px,500);
+    color: #fe7865;
   }
 }
+
 .tourinfo__buttons-block {
   display: flex;
   flex-direction: column;
   margin-bottom: 10%;
 }
+
 .tourinfo__line {
-  width: 100%;
   height: 2px;
+  width: 84%;
+  max-width: 885px;
   background-color: rgba(44, 46, 63, 0.3);
+
+  @media (max-width: $width-desktop) {
+    width: 100%;
+    max-width: unset;
+  }
 }
+
 .tourinfo__list-name {
   @include list-refresh;
   display: flex;
   margin-bottom: 1.2%;
   justify-content: space-between;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  width: 84%;
+  max-width: 885px;
+
+  @media (max-width: $width-desktop) {
     overflow: hidden;
     justify-content: unset;
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    overflow: hidden;
-    justify-content: unset;
+    width: auto;
   }
 }
+
 .tourinfo__name-item {
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-   margin-right: 100px;
+  @media (max-width: $width-tablet) {
+    margin-right: 100px;
+
     &:last-child {
       margin-right: 0;
     }
   }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     margin-right: 100px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -81,40 +91,34 @@
   display: flex;
   justify-content: space-between;
   margin: 0 0 21%;
-  @media (min-width: $width-mobile) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     margin: 0;
   }
 }
+
 .tourinfo__item {
   position: relative;
   display: none;
+
   &--active {
     display: block;
+  }
 
-  }
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
+  @media (max-width: $width-desktop) {
     position: static;
-    &--active {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
-    position: static;
+
     &--active {
       display: flex;
       flex-direction: column;
     }
   }
 }
+
 .tourinfo__brief {
   width: 58vw;
-  @media (min-width: $width-mobile) and (max-width: $max-width-mobile) {
-    width: auto;
-  }
-  @media (min-width: $width-tablet) and (max-width: $max-width-tablet) {
+
+  @media (max-width: $width-desktop) {
     width: auto;
   }
 }
-
-
