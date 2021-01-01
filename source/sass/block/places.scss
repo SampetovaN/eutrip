@@ -30,10 +30,10 @@
   @media (max-width: $width-tablet) {
     font-size: 24px;
     line-height: 36px;
-    margin: 0;
     width: auto;
     text-align: center;
     position: static;
+    margin: 0 0 6%;
 
     &::after {
       @include reset-el;
@@ -46,22 +46,27 @@
   color: rgba(#2c2e3f, 0.7);
   width: 30%;
   margin: 0 0 4.9%;
+  min-width: 248px;
 
   @media (max-width: $width-desktop) {
-    width: auto;
     text-align: center;
-    padding: 0 130px;
-    margin: 0 0 35px;
+    padding: 0;
+    width: 51%;
+    margin: 0 auto 5%;
+    min-width: auto;
   }
 
   @media (max-width: $width-tablet) {
-    margin: 0 0 35px;
+    margin: 0 0 24px;
     padding: 0;
+    width: 100%;
   }
 }
 
-.places__wrapper {
-  @media (min-width: $width-desktop + 1) {
-    padding: 0 82px;
+.places__text {
+  padding: 0 19.4%;
+
+  @media (max-width: $width-desktop) {
+    padding: 0;
   }
 }

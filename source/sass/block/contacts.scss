@@ -67,16 +67,16 @@
 
     &::before {
       background-image: url("../img/phone.svg");
-      width: 6vh;
-      height: 6vh;
+      width: 30px;
+      height: 30px;
     }
   }
 
   &--email {
     &::before {
       background-image: url("../img/mail.svg");
-      width: 6vh;
-      height: 6vh;
+      width: 26px;
+      height: 20px;
     }
   }
 
@@ -105,22 +105,7 @@
     padding-left: 35px;
 
     &--phone {
-      font-size: 16px;
-      line-height: 32px;
-
-      &::before {
-        background-image: url("../img/phone.svg");
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    &--email {
-      &::before {
-        background-image: url("../img/mail.svg");
-        width: 26px;
-        height: 20px;
-      }
+      @include text-correct(16px, 32px);
     }
 
     &--desktop {

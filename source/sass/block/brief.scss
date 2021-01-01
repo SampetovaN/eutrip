@@ -1,9 +1,13 @@
 .brief {
   display: flex;
   flex-direction: row;
+  position: relative;
+  min-width: 688px;
 
-  @media (max-width: $width-tablet) {
+  @media (max-width: $width-desktop) {
     display: block;
+    position: static;
+    min-width: auto;
   }
 }
 
@@ -31,11 +35,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
-  width: 41%;
+  width: 37%;
+  min-height: 596px;
+  min-width: 430px;
   margin-top: -1%;
 
   @media (max-width: $width-desktop) {
     display: none;
+    position: static;
   }
 }
 
@@ -152,7 +159,7 @@
   display: flex;
   flex-direction: column;
   width: 35%;
-  margin-right: 7%;
+  margin-right: 5%;
 
   @media (max-width: $width-tablet) {
     width: auto;
@@ -173,7 +180,6 @@
   width: 64%;
   padding: 8% 0;
   box-sizing: border-box;
-  margin: auto;
 
   @media (max-width: $width-tablet) {
     margin: 0 auto 20px;

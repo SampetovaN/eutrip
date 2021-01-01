@@ -5,15 +5,16 @@
   align-content: center;
   justify-content: space-around;
   margin: 0;
+  padding: 0 18%;
 
-  @media (width: 1920px) {
-    margin: 0 -25px;
+  @media (max-width: $width-desktop) {
+    padding: 0 9%;
   }
 
   @media (max-width: $width-tablet) {
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0 16px;
   }
 }
 
@@ -21,26 +22,31 @@
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 7.8%;
+  margin-bottom: 8.6%;
 
-  @media (width: 1920px) {
-    &:nth-child(4) {
-      margin-left: 10%;
+  @media (max-width: $width-desktop) {
+    margin: 0 0 3.6%;
+  }
+
+  @media (width: $width-maket) {
+    &:nth-child(4n+4) {
+      margin-left: 11%;
     }
 
-    &:nth-child(5) {
-      margin-right: 10%;
+    &:nth-child(5n+5) {
+      margin-right: 11%;
     }
   }
 
-  @media (max-width: $width-desktop) {
-    margin: 0 auto;
+  @media (max-width: $width-tablet) {
+    margin: 0 auto 12%;
   }
 }
 
 .countries__link {
   position: relative;
   display: block;
+  margin: 0 1%;
 
   &:hover {
     ~ .countries__hoover {
@@ -66,6 +72,11 @@
     }
   }
 
+  @media (max-width: $width-desktop) {
+    width: 288px;
+    height: 425px;
+  }
+
   @media (max-width: $width-tablet) {
     &:hover {
       ~ .countries__hoover {
@@ -76,6 +87,7 @@
         @include reset-el;
       }
     }
+    margin: 0;
   }
 }
 
@@ -95,11 +107,21 @@
   width: 215px;
   background-color: #ffffff;
   z-index: 5;
-  bottom: 1.1%;
+  bottom: 0;
   margin: 0 auto;
   left: 0;
   right: 0;
-  padding: 20px 0;
+  padding-top: 16px;
+  padding-bottom: 12px;
+
+  @media (max-width: $width-desktop) {
+    padding-top: 14px;
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $width-mobile) {
+    padding: 20px 0;
+  }
 }
 
 .countries__name {
@@ -107,4 +129,8 @@
   color: #2c2e3f;
   text-align: center;
   margin: 0;
+}
+
+.countries__image {
+  object-fit: cover;
 }

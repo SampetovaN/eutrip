@@ -1,53 +1,4 @@
 .feedback {
-  padding: 0;
-  position: static;
-  background-image: none;
-
-  @media (max-width: $width-tablet) {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 432px;
-      width: 100%;
-      z-index: -1;
-      top: 0;
-    }
-
-    &--greece {
-      &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
-      }
-    }
-
-    &--albany {
-      &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
-      }
-    }
-
-    &--macedonia {
-      &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
-      }
-    }
-
-    &--montenegro {
-      &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
-      }
-    }
-
-    &--croatia {
-      &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
-      }
-    }
-  }
-
   @media (max-width: $width-desktop) {
     position: relative;
 
@@ -92,37 +43,35 @@
       }
     }
   }
-}
 
-@media (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-  .feedback {
+  @media (max-width: $width-tablet) {
     &--greece {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
 
     &--albany {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
 
     &--macedonia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
 
     &--montenegro {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
 
     &--croatia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
       }
     }
   }
@@ -162,26 +111,49 @@
   }
 }
 
+@media (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .feedback {
+    &--greece {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+
+    &--albany {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+
+    &--macedonia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+
+    &--montenegro {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+
+    &--croatia {
+      &::after {
+        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+      }
+    }
+  }
+}
 
 .feedback__wrapper {
   position: absolute;
   width: 28.9%;
+  min-width: 300px;
   margin: 0;
-  top: 17%;
-  right: -6%;
-  padding: 2.9% 3.3%;
   background-color: #ffffff;
-
-  @media (max-width: $width-tablet) {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 268px;
-    box-sizing: border-box;
-    padding: 50px 30px;
-    margin: 35px auto 45px;
-  }
+  top: 18%;
+  right: -3.2%;
+  padding: 2.4% 4% 2.4% 3%;
 
   @media (max-width: $width-desktop) {
     position: static;
@@ -192,6 +164,12 @@
     box-sizing: border-box;
     padding: 50px 30px;
     margin: 35px auto 45px;
+    min-width: auto;
+  }
+
+  @media (max-width: $width-tablet) {
+    align-items: center;
+    width: 268px;
   }
 }
 
@@ -245,15 +223,7 @@
   text-align: unset;
 
   @media (max-width: $width-tablet) {
-    font-size: 14px;
-    line-height: 28px;
     text-align: center;
-  }
-
-  @media (max-width: $width-desktop) {
-    font-size: 14px;
-    line-height: 28px;
-    text-align: unset;
   }
 }
 
@@ -262,14 +232,7 @@
   font-family: "Poppins", sans-serif;
   color: #2c2e3f;
 
-  @media (max-width: $width-tablet) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
   @media (max-width: $width-desktop) {
-    font-size: 16px;
-    line-height: 24px;
     width: 174px;
   }
 }
@@ -287,9 +250,5 @@
 
   @media (max-width: $width-tablet) {
     flex-direction: column;
-  }
-
-  @media (max-width: $width-desktop) {
-    flex-direction: row;
   }
 }

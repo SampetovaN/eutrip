@@ -52,33 +52,6 @@
     }
   }
 
-  @media (max-width: $width-tablet) {
-    width: auto;
-    margin: 0;
-
-    &::after {
-      content: "";
-      width: 100%;
-      position: absolute;
-      height: 1px;
-      background-color: #d7d9df;
-      bottom: 0;
-      right: 0;
-    }
-
-    &:nth-child(2) {
-      &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        height: 1px;
-        background-color: #d7d9df;
-        bottom: 0;
-        right: 0;
-      }
-    }
-  }
-
   @media (max-width: $width-desktop) {
     width: 50%;
 
@@ -111,6 +84,21 @@
         bottom: 0;
         right: 0;
       }
+    }
+  }
+
+  @media (max-width: $width-tablet) {
+    width: auto;
+    margin: 0;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 1px;
+      background-color: #d7d9df;
+      bottom: 0;
+      right: 0;
     }
   }
 }
