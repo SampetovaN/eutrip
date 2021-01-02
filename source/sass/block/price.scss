@@ -72,8 +72,12 @@
   @media (max-width: $width-desktop) {
     font-size: 16px;
     line-height: 27px;
-    margin: 0 0 20px;
+    margin: 0 0 5%;
     text-align: center;
+  }
+
+  @media (max-width: $width-tablet) {
+    margin: 0 0 8%;
   }
 }
 
@@ -120,7 +124,7 @@
     text-decoration: underline;
     color: #fe7865;
     position: static;
-    margin: 0 0 40px;
+    margin: 0 0 4%;
     padding: 0;
 
     &::before {
@@ -130,6 +134,10 @@
       position: static;
     }
   }
+
+  @media (max-width: $width-tablet) {
+    margin-bottom: 14%;
+  }
 }
 
 .price__plans {
@@ -138,16 +146,17 @@
   flex-direction: row;
   margin-bottom: 12%;
 
-  @media (max-width: $width-tablet) {
-    flex-direction: column;
-    max-width: 288px;
-    margin: 0 auto 50px;
-  }
-
   @media (max-width: $width-desktop) {
     padding: 0 50px;
     justify-content: space-between;
     max-width: inherit;
     margin-bottom: 125px;
+  }
+
+  @media (max-width: $width-tablet) {
+    flex-direction: column;
+    max-width: 288px;
+    margin: 0 auto 50px;
+    padding: 0;
   }
 }

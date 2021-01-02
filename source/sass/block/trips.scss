@@ -3,18 +3,15 @@
   color: #141517;
   margin-left: 3%;
 
-  @media (max-width: $width-tablet) {
-    font-size: 18px;
-    line-height: 32px;
-    text-align: center;
-    margin: 0 0 20px;
-  }
-
   @media (max-width: $width-desktop) {
-    font-size: 18px;
-    line-height: 32px;
     text-align: left;
     margin-left: 0;
+    margin-bottom: 6%;
+  }
+
+  @media (max-width: $width-tablet) {
+    text-align: center;
+    margin: 0 0 20px;
   }
 }
 
@@ -45,16 +42,6 @@
     width: 32%;
   }
 
-  @media (max-width: $width-tablet) {
-    margin: 0;
-
-    &:last-child {
-      flex-grow: 2;
-      width: 100%;
-      margin: 0;
-    }
-  }
-
   @media (max-width: $width-desktop) {
     margin: 0;
     width: auto;
@@ -63,24 +50,33 @@
       width: auto;
     }
   }
+
+  @media (max-width: $width-tablet) {
+    margin: 0;
+    width: 33%;
+
+    &:last-child {
+      flex-grow: 2;
+      width: 100%;
+      margin: 0;
+    }
+  }
 }
 
 .trips__town {
   @include text-sets(14px,17px,normal);
   color: rgba(#141517, 0.5);
 
+  @media (max-width: $width-desktop) {
+    line-height: 26px;
+    text-align: left;
+  }
+
   @media (max-width: $width-tablet) {
-    font-size: 14px;
     line-height: 23px;
     padding: 0;
     margin: 0;
     text-align: center;
-  }
-
-  @media (max-width: $width-desktop) {
-    font-size: 14px;
-    line-height: 23px;
-    text-align: left;
   }
 }
 
@@ -91,17 +87,16 @@
   flex-wrap: nowrap;
   justify-content: unset;
 
-  @media (max-width: $width-tablet) {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 15px;
-  }
-
   @media (max-width: $width-desktop) {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    padding-right: 50px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $width-tablet) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 15px;
   }
 }

@@ -1,8 +1,12 @@
 .consult__wrapper {
   padding: 70px 21px;
 
+  @media (max-width: $width-desktop) {
+    padding-bottom: 75px;
+  }
+
   @media (max-width: $width-tablet) {
-    padding: 0 21px;
+    padding: 0 17px;
   }
 }
 
@@ -66,7 +70,7 @@
   @media (max-width: $width-desktop) {
     font-size: 25px;
     line-height: 32px;
-    margin: 0 0 20px;
+    margin: 0 0 14px;
   }
 }
 
@@ -98,12 +102,12 @@
   @media (max-width: $width-desktop) {
     position: static;
     background-color: #ffffff;
-    width: auto;
     padding: 50px;
-    margin: 70px 50px;
+    margin: 0 35px;
     box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
     border-radius: 5px;
     max-height: unset;
+    width: 90%;
   }
 
   @media (max-width: $width-tablet) {
@@ -112,7 +116,7 @@
     width: auto;
     box-shadow: none;
     padding: 50px 0;
-    margin: 0 0 50px;
+    margin: 0 0 68px;
     max-height: unset;
     box-sizing: unset;
   }

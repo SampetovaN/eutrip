@@ -7,10 +7,10 @@
       position: absolute;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 432px;
+      height: 416px;
       width: 100%;
       z-index: -1;
-      top: 0;
+      top: -80px;
     }
 
     &--greece {
@@ -45,6 +45,11 @@
   }
 
   @media (max-width: $width-tablet) {
+    &::after {
+      height: 433px;
+      top: -57px;
+    }
+
     &--greece {
       &::after {
         background-image: url("../img/aleyna-rentz-mobile-1.jpg");
@@ -162,14 +167,17 @@
     align-items: flex-start;
     width: 382px;
     box-sizing: border-box;
-    padding: 50px 30px;
-    margin: 35px auto 45px;
     min-width: auto;
+    padding: 30px 30px;
+    margin: 97px auto 80px;
   }
 
   @media (max-width: $width-tablet) {
     align-items: center;
     width: 268px;
+    margin-top: 82px;
+    padding: 30px 16px;
+    margin-bottom: 14%;
   }
 }
 
@@ -193,7 +201,6 @@
   @media (max-width: $width-desktop) {
     font-size: 30px;
     line-height: 36px;
-    padding-bottom: 5px;
     border: none;
 
     &::after {
@@ -206,7 +213,8 @@
     font-size: 20px;
     line-height: 24px;
     border-bottom: 1px solid #fe7865;
-    padding-bottom: 5px;
+    padding-bottom: 11px;
+    margin-bottom: 9%;
     position: static;
 
     &::after {
@@ -235,12 +243,25 @@
   @media (max-width: $width-desktop) {
     width: 174px;
   }
+
+  @media (max-width: $width-tablet) {
+    width: auto;
+  }
 }
 
 .feedback__photo {
   border-radius: 50%;
   display: block;
   margin-right: 4%;
+
+  @media (max-width: $width-desktop) {
+    margin-right: 7%;
+  }
+
+  @media (max-width: $width-tablet) {
+    margin-right: 0;
+    margin-bottom: 4%;
+  }
 }
 
 .feedback__person {

@@ -55,6 +55,11 @@
   @media (max-width: $width-desktop) {
     width: 50%;
 
+    &::after {
+      bottom: 5%;
+      right: -9%;
+    }
+
     &:last-child {
       width: 100%;
       position: relative;
@@ -67,12 +72,12 @@
         background-color: #d7d9df;
         bottom: 0;
         right: 0;
-        top: 0;
+        top: -2px;
       }
     }
 
     &::after {
-      height: 59vh;
+      height: 48vh;
     }
 
     &:nth-child(2) {
