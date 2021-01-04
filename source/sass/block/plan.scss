@@ -1,11 +1,12 @@
 .plan {
   border: #f17d4b solid 3px;
   border-radius: 9px;
-  padding: 6% 7% 5% 6%;
+  padding: 6% 7.6% 5% 4.5%;
+  background-color: #ffffff;
+  width: 267px;
 
   &--ordinary {
     border: rgba(#2c2e3f, 0.3) solid 1px;
-    margin-left: 5%;
   }
 
   @media (max-width: $width-desktop) {
@@ -14,13 +15,12 @@
     margin: 0;
     border-radius: 6px 6px 0 0;
     position: relative;
-
-    &--ordinary {
-      margin: 0;
-      border-width: 1px;
-    }
     width: 288px;
     box-sizing: border-box;
+
+    &--ordinary {
+      border-width: 1px;
+    }
   }
 
   @media (max-width: $width-tablet) {
@@ -40,7 +40,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 1%;
+
+  @media (max-width: $width-desktop) {
+    padding: 0 5%;
+  }
 }
 
 .plan__header {
@@ -60,6 +64,7 @@
   @include text-sets(28px,34px,600);
   color: #fe7865;
   margin: 0 12.7%  0 -6%;
+  padding-left: 4%;
 
   &--ordinary {
     color: rgba(#141517, 0.7);
@@ -75,6 +80,7 @@
 
 .plan__cost {
   @include text-sets(25px,34px,700);
+  padding-right: 4%;
 
   &--ordinary {
     color: rgba(#141517, 0.7);
@@ -92,9 +98,10 @@
   @include text-sets(16px,24px,normal);
   color: #2c2e3f;
   flex-grow: 1;
-  margin: 0 0 21%;
-  position: relative;
+  margin: 0 0 11%;
+  padding-bottom: 11%;
   border-bottom: 1px #fe7865 solid;
+  width: 100%;
 
   &--ordinary {
     border-color: rgba(#141517, 0.7);
@@ -119,29 +126,27 @@
 .plan__item {
   @include text-sets(16px,32px,normal);
   color: #2c2e3f;
-  padding-left: 21px;
+  padding-left: 30px;
   position: relative;
-  margin-bottom: 1%;
+  margin-bottom: 4%;
+
 
   &::after {
     content: "";
     position: absolute;
     background-image: url("../img/check.svg");
     background-repeat: no-repeat;
-    width: 6vh;
-    height: 6vh;
-    top: 11%;
-    left: 0;
+    width: 22px;
+    height: 22px;
+    top: 6px;
+    left: 1%;
   }
 
   &--ordinary {
-    margin-bottom: 3%;
-    padding-left: 20px;
+    margin-bottom: 5%;
 
     &::after {
       background-image: url("../img/check-orange.svg");
-      top: 10%;
-      left: -5%;
     }
   }
 
@@ -155,8 +160,6 @@
     &::after {
       top: 11px;
       left: 0;
-      width: 22px;
-      height: 22px;
     }
 
     &--ordinary {
@@ -203,9 +206,12 @@
 }
 
 .plan__button {
-  width: 15.3vw;
-  padding: 10% 0;
+  width: 15.9vw;
+  padding: 10.1% 0;
+  font-size: 15px;
   display: block;
+  max-width: 300px;
+  min-width: 288px;
 
   &--ordinary {
     margin: 0;
@@ -216,13 +222,15 @@
     padding: 19px 0 16px;
     margin-left: -1px;
     position: absolute;
-    bottom: 0;
+    bottom: -0.1%;
     font-size: 13px;
+    max-width: none;
+    min-width: auto;
   }
 
   @media (max-width: $width-tablet) {
-    width: 102%;
+    width: 101%;
     padding: 19px 0;
-    margin: 0 auto -3px -2px;
+    margin: 0 auto -3px -1px;
   }
 }

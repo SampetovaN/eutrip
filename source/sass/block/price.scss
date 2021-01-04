@@ -1,9 +1,16 @@
 .price__wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 0 12%;
 
   @media (max-width: $width-desktop) {
+    justify-content: space-between;
     flex-direction: column;
+    margin: 0;
+    width: auto;
   }
 }
 
@@ -13,12 +20,16 @@
 
 .price__text {
   order: 2;
-  margin-left: 23%;
   margin-top: 6%;
+  width: 26%;
+  flex-grow: 2;
 
   @media (max-width: $width-desktop) {
     order: 0;
     margin: 0;
+    max-width: none;
+    flex-grow: initial;
+    width: auto;
   }
 }
 
@@ -67,7 +78,7 @@
 .price__desc {
   @include text-sets(16px,27px,normal);
   color: rgba(#2c2e3f, 0.7);
-  margin: 0 0 21% 3%;
+  margin: 0 0 63px 3%;
 
   @media (max-width: $width-desktop) {
     font-size: 16px;
@@ -105,7 +116,7 @@
   @include text-sets(20px,32px,normal);
   color: #000000;
   position: relative;
-  padding-left: 20%;
+  padding-left: 75px;
 
   &::before {
     background-image: url("../img/phone-orange.svg");
@@ -116,6 +127,17 @@
     background-repeat: no-repeat;
     top: 9%;
     left: 2%;
+  }
+
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba(#000000, 0.7);
+
+    &::before {
+      opacity: 0.7;
+    }
   }
 
   @media (max-width: $width-desktop) {
@@ -144,13 +166,20 @@
   @include list-refresh;
   display: flex;
   flex-direction: row;
-  margin-bottom: 12%;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-shrink: 0;
+  width: 73%;
+  margin-right: 0;
+  min-width: 840px;
 
   @media (max-width: $width-desktop) {
     padding: 0 50px;
     justify-content: space-between;
     max-width: inherit;
     margin-bottom: 125px;
+    width: auto;
+    min-width: auto;
   }
 
   @media (max-width: $width-tablet) {

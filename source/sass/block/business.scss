@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $width-tablet) {
-    padding: 20px 0;
+    padding: 25px 0 20px;
   }
 }
 
@@ -35,5 +35,9 @@
     padding: 0;
     margin: 0;
     text-align: center;
+  }
+
+  @media (max-width: $width-tablet) {
+    line-height: 24px;
   }
 }

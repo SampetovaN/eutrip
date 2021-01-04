@@ -39,12 +39,11 @@
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
     "start": "gulp start",
-    "image": "gulp image",
+    "image": "gulp images",
     "sprite": "gulp sprite"
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
     "Firefox ESR"
   ],
   "editorconfig-cli": [

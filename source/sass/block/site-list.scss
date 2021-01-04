@@ -41,7 +41,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: rgba(#fe7865, 0.7);
+      a {
+        color: rgba(#fe7865, 0.7);
+      }
 
       &::before {
         opacity: 0.7;

@@ -145,9 +145,11 @@
   margin: 0 0 12%;
   text-align: unset;
 
+
   @media (max-width: $width-desktop) {
     @include text-sets(16px, 28px, normal);
     margin: 0 0 2.1%;
+    width: 100%;
   }
 
   @media (max-width: $width-tablet) {
@@ -177,15 +179,18 @@
 }
 
 .brief__button {
-  width: 64%;
-  padding: 8% 0;
+  width: 61%;
+  padding: 7% 0;
   box-sizing: border-box;
+  font-size: 15px;
+  min-width: 193px;
 
   @media (max-width: $width-desktop) {
     font-size: 13px;
     width: 250px;
     padding: 19px 0;
     margin: 0 auto 2%;
+    min-width: auto;
   }
 
   @media (max-width: $width-tablet) {

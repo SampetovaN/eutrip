@@ -43,7 +43,7 @@
           <h1 class="intro__title">Путешествие по Европе</h1>
           <p class="intro__desc">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
             потрясающая красота природы.</p>
-          <a class="button  intro__button" href="#tourinfo">Смотреть тур</a>
+          <a class="button intro__button" href="#tourinfo">Смотреть тур</a>
         </div>
       </div>
     </section>
@@ -80,7 +80,7 @@
                 <source type="image/webp" media="(max-width: 767px)"
                         srcset="img/polina-rytova-mobile.webp 1x, img/polina-rytova-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
-                        srcset="img/polina-rytova-laptop.webp 1x, img/polina-rytova-laptop@2x.webp2x">
+                        srcset="img/polina-rytova-laptop.webp 1x, img/polina-rytova-laptop@2x.webp 2x">
                 <source type="image/webp"
                         srcset="img/polina-rytova-desktop.webp 1x, img/polina-rytova-desktop@2x.webp 2x">
 
@@ -140,11 +140,11 @@
                 <source type="image/webp" media="(max-width: 767px)"
                         srcset="img/robert-thiemann-mobile.webp 1x, img/robert-thiemann-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
-                        srcset="img/robert-thiemann-laptop.webp 1x, img/robert-thiemann-laptop@2x.jpg 2x">
+                        srcset="img/robert-thiemann-laptop.webp 1x, img/robert-thiemann-laptop@2x.webp 2x">
                 <source type="image/webp"
                         srcset="img/robert-thiemann-desktop.webp 1x, img/robert-thiemann-desktop@2x.webp 2x">
 
-                <img class="countries__image" src="img/robert-thiemann-desktop.jpg" srcset="img/robert-thiemann-desktop.jpg 1x, img/robert-thiemann-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия">
+                <img loading="lazy" class="countries__image" src="img/robert-thiemann-desktop.jpg" srcset="img/robert-thiemann-desktop.jpg 1x, img/robert-thiemann-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия">
               </picture>
             </a>
             <div class="countries__hoover">
@@ -384,15 +384,15 @@
           <form class="buy__form form buy-form" method="post" action="/">
             <div class="buy-form__input-list">
               <div class="buy-form__input field field-buy">
-                <label class="field__label visually-hidden" for="phone-buy">Телефон:</label>
-                <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" placeholder="+7 Введите 10 цифр номера">
-                <svg class="field__icon" width="6" height="7">
+                <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
+                <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" required pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
+                <svg class="field__icon" width="21" height="12">
                   <use xlink:href="#sprite-star"></use>
                 </svg>
               </div>
               <div class="buy-form__input field field-buy">
                 <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
-                <input class="field__input field-buy__input" type="email" name="email" id="email-buy" placeholder="E-mail">
+                <input class="field__input field-buy__input" type="email" name="email" id="email-buy"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
               </div>
             </div>
             <button class="button buy-form__button" type="submit">Отправить</button>
@@ -416,15 +416,15 @@
             <div class="form__input-list">
               <div class="form__input field">
                 <label class="field__label visually-hidden" for="phone" aria-label="Поле для ввода телефона">Телефон:</label>
-                <input class="field__input field__input--phone" type="tel" name="phone" id="phone" placeholder="+7 Введите 10 цифр номера">
-                <svg class="field__icon" width="6" height="7">
+                <input class="field__input field__input--phone" type="tel" name="phone" id="phone" required pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
+                <svg class="field__icon" width="21" height="12">
                   <use xlink:href="#sprite-star"></use>
                 </svg>
               </div>
               <div class="form__input field">
                 <label class="field__label visually-hidden" for="email" aria-label="Поле для ввода электоронной почты">Электронная
                   почта:</label>
-                <input class="field__input" type="email" name="email" id="email" placeholder="E-mail">
+                <input class="field__input" type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
               </div>
             </div>
             <button class="button form__button" type="submit">Отправить</button>
@@ -490,7 +490,5 @@
     </div>
   </footer>
 </div>
-<script src="js/vendor.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>

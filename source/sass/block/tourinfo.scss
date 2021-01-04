@@ -17,6 +17,8 @@
 }
 
 .tourinfo__button {
+  cursor: pointer;
+
   @include text-sets(20px,24px,500);
   border: none;
   background-color: transparent;

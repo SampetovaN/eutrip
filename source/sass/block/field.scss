@@ -16,17 +16,22 @@
       left: 0;
     }
   }
+
+  @media (max-width: $width-desktop) {
+    width: auto;
+  }
 }
 
 .field__icon {
   position: absolute;
-  top: 6px;
-  left: 15px;
+  top: 12px;
+  left: 13px;
 }
 
 .field__input {
   padding: 6% 11% 6% 8%;
-  width: 98%;
+  width: 200px;
+  cursor: pointer;
 
   &--phone {
     &:not(:placeholder-shown),
@@ -39,21 +44,29 @@
     }
   }
 
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: #fe7865;
+  }
+
   &::placeholder {
     @include text-sets(13px, 17px, normal);
     color: #141517;
   }
 
-  @media (max-width: $width-tablet) {
-    width: 100%;
+  @media (max-width: $width-desktop) {
+    padding: 15px 19px 16px 15px;
+    width: 269px;
     box-sizing: border-box;
 
     &--phone {
       padding-left: 26px;
+      padding-right: 19px;
     }
   }
 
-  @media (max-width: $width-desktop) {
+  @media (max-width: $width-tablet) {
     padding: 15px 15px 16px;
     width: 100%;
 

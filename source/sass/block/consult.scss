@@ -11,33 +11,35 @@
 }
 
 .consult {
+  padding: 0 6%;
   position: relative;
-  height: 100vh;
-  max-height: 455px;
+  height: 455px;
   background-image: url("../img/anastasia-leonova-desktop.jpg");
   background-repeat: no-repeat;
   background-position-x: 36%;
   background-position-y: -29%;
-  margin-bottom: 8%;
-
-  @media (max-width: $width-tablet) {
-    background-color: #fbf8f8;
-    background-image: none;
-    position: static;
-    width: auto;
-    height: auto;
-    max-height: unset;
-  }
-
-  @media (min-width: $width-tablet) {
-    background-color: #ffffff;
-  }
+  margin: 0 auto 8%;
+  min-width: 800px;
 
   @media (max-width: $width-desktop) {
     background-image: url("../img/anastasia-leonova-laptop.jpg");
     background-size: cover;
     height: auto;
     max-height: unset;
+    min-width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: $width-tablet) {
+    background-color: #ffffff;
+  }
+
+  @media (max-width: $width-tablet) {
+    background-color: #fbf8f8;
+    background-image: none;
+    position: static;
+    width: auto;
   }
 }
 
@@ -55,17 +57,17 @@
   }
 }
 
-@media (max-width: $width-tablet)  and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+@media (max-width: $width-tablet) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .consult {
     background-image: none;
   }
 }
 
 .consult__title {
-  @include text-sets(25px,32px,600);
+  @include text-sets(25px, 32px, 600);
   color: #141517;
   text-align: center;
-  margin: 9% 0 2%;
+  margin: 70px 0 5px;
 
   @media (max-width: $width-desktop) {
     font-size: 25px;
@@ -75,7 +77,7 @@
 }
 
 .consult__desc {
-  @include text-sets(16px,24px,normal);
+  @include text-sets(16px, 24px, normal);
   color: #141517;
   text-align: center;
   margin: 0 0 3%;
@@ -85,19 +87,27 @@
     line-height: 24px;
     margin: 0 0 20px;
   }
+
+  @media (max-width: $width-tablet) {
+    margin: 0 0 23px;
+  }
 }
 
 .consult__content {
   background-color: #ffffff;
   position: absolute;
-  right: 19%;
-  top: 15%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 42%;
   border-radius: 6px;
   padding: 0 1%;
-  width: 32%;
+  width: 34%;
   box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
   max-height: 315px;
   box-sizing: border-box;
+  min-width: 579px;
 
   @media (max-width: $width-desktop) {
     position: static;
@@ -108,6 +118,7 @@
     border-radius: 5px;
     max-height: unset;
     width: 90%;
+    min-width: unset;
   }
 
   @media (max-width: $width-tablet) {
@@ -119,5 +130,12 @@
     margin: 0 0 68px;
     max-height: unset;
     box-sizing: unset;
+  }
+}
+
+.consult__form {
+  @media (min-width: $width-tablet) and (max-width: $width-desktop) {
+    max-width: 659px;
+    margin: 0 auto;
   }
 }

@@ -23,16 +23,17 @@
 
   @media (max-width: $width-tablet) {
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0 0 23px;
   }
 }
 
 .contacts__item {
   @include text-sets(14px, 17px, normal);
-  padding-left: 13%;
+  padding-left: 30px;
   text-decoration: underline;
   margin-bottom: 0;
   position: relative;
+  color: #fe7865;
 
   &:first-child {
     margin-bottom: 6%;
@@ -40,6 +41,18 @@
 
   a {
     color: #fe7865;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    a {
+      color: rgba(#fe7865, 0.7);
+    }
+
+    &::before {
+      opacity: 0.7;
+    }
   }
 
   &::before {
@@ -69,28 +82,12 @@
   }
 
   &--email {
+    word-break: break-all;
+
     &::before {
       background-image: url("../img/mail.svg");
       width: 26px;
       height: 20px;
-    }
-  }
-
-  @media (max-width: $width-tablet) {
-    margin: 0 auto;
-
-    &--email {
-      margin: 0 auto 15px;
-    }
-  }
-
-  @media (max-width: $width-desktop) {
-    margin-bottom: 15px;
-    margin-left: 50px;
-
-    &--email {
-      margin-bottom: 15px;
-      margin-left: 50px;
     }
   }
 
@@ -99,6 +96,8 @@
     line-height: 17px;
     text-align: unset;
     padding-left: 35px;
+    margin-bottom: 15px;
+    margin-left: 50px;
 
     &--phone {
       @include text-correct(16px, 32px);
@@ -110,6 +109,20 @@
 
     &--other {
       display: block;
+    }
+
+    &--email {
+      margin-bottom: 15px;
+      margin-left: 50px;
+    }
+  }
+
+  @media (max-width: $width-tablet) {
+    margin: 0 auto;
+    padding-left: 41px;
+
+    &--email {
+      margin: 0 auto 19px;
     }
   }
 }
@@ -125,6 +138,6 @@
   }
 
   @media (max-width: $width-tablet) {
-    margin: 0;
+    margin: 0 0 9%;
   }
 }
