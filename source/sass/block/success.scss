@@ -10,9 +10,9 @@
   width: 400px;
   text-align: center;
   padding-top: 133px;
-}
 
-.success__button {
-  text-align: right;
-  align-self: flex-end;
+  @media (max-width: $width-desktop) {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

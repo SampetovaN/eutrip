@@ -363,9 +363,9 @@
           </ul>
         </div>
         <div class="visually-hidden buy buy--info">
-          <button class="close" type="button" aria-label="Кнопка закрытия формы"></button>
+          <button class="close buy__button" type="button" aria-label="Кнопка закрытия формы"></button>
           <h2 class="buy__title">Купить тур</h2>
-          <form class="buy__form form buy-form" method="post" action="#">
+          <form class="buy__form form buy-form" action="">
             <div class="buy-form__input-list">
               <div class="buy-form__input field field-buy">
                 <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
@@ -383,7 +383,7 @@
           </form>
         </div>
         <div class="buy success visually-hidden">
-          <button class="close success__button" type="button" aria-label="Кнопка закрытия отправки формы"></button>
+          <button class="close buy__button buy__button--success" type="button" aria-label="Кнопка закрытия отправки формы"></button>
           <div class="success__wrapper">
             <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
             <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
@@ -396,7 +396,7 @@
         <div class="consult__content">
           <h2 class="consult__title">У Вас остались вопросы?</h2>
           <p class="consult__desc">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form class="consult__form form" method="post" action="#">
+          <form class="consult__form form" action="#">
             <div class="form__input-list">
               <div class="form__input field">
                 <label class="field__label visually-hidden" for="phone" aria-label="Поле для ввода телефона">Телефон:</label>
