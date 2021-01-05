@@ -2,6 +2,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
+  &--menu-opened {
+    .header {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 .content__footer {
