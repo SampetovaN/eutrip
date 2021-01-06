@@ -913,11 +913,20 @@ input[type="radio"],
     display: block;
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     border: #ffffff solid 1px;
-    margin-left: 60px;
-    padding: 30px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px 10%;
     margin-top: 152px;
-    z-index: 2; }
+    z-index: 2;
+    width: 74%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    @media (max-width: 1023px) {
+      .countries__link:hover ~ .countries__hoover {
+        width: 85%; } }
   .countries__link:hover::after {
     content: "";
     position: absolute;
@@ -931,33 +940,6 @@ input[type="radio"],
     .countries__link {
       width: 288px;
       height: 425px; } }
-  @media (max-width: 767px) {
-    .countries__link {
-      margin: 0; }
-      .countries__link:hover ~ .countries__hoover {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        -webkit-clip-path: inset(100%);
-                clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden; }
-      .countries__link:hover::after {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        -webkit-clip-path: inset(100%);
-                clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden; } }
 
 .countries__hoover {
   display: none; }
@@ -967,6 +949,7 @@ input[type="radio"],
   line-height: 17px;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
   margin: 0; }
 
@@ -1287,13 +1270,13 @@ input[type="radio"],
     .feedback--greece::after {
       background-image: url("../img/aleyna-rentz-laptop-1.jpg"); }
     .feedback--albany::after {
-      background-image: url("../img/aleyna-rentz-laptop-1.jpg"); }
+      background-image: url("../img/polina-rytova-laptop-1.jpg"); }
     .feedback--macedonia::after {
-      background-image: url("../img/aleyna-rentz-laptop-1.jpg"); }
+      background-image: url("../img/milana-jovanov-laptop-1.jpg"); }
     .feedback--montenegro::after {
-      background-image: url("../img/aleyna-rentz-laptop-1.jpg"); }
+      background-image: url("../img/hanna-bezsonova-laptop-1.jpg"); }
     .feedback--croatia::after {
-      background-image: url("../img/aleyna-rentz-laptop-1.jpg"); } }
+      background-image: url("../img/robert-thiemann-laptop-1.jpg"); } }
 
 @media (max-width: 767px) {
   .feedback::after {
@@ -1302,37 +1285,37 @@ input[type="radio"],
   .feedback--greece::after {
     background-image: url("../img/aleyna-rentz-mobile-1.jpg"); }
   .feedback--albany::after {
-    background-image: url("../img/aleyna-rentz-mobile-1.jpg"); }
+    background-image: url("../img/polina-rytova-mobile-1.jpg"); }
   .feedback--macedonia::after {
-    background-image: url("../img/aleyna-rentz-mobile-1.jpg"); }
+    background-image: url("../img/milana-jovanov-mobile-1.jpg"); }
   .feedback--montenegro::after {
-    background-image: url("../img/aleyna-rentz-mobile-1.jpg"); }
+    background-image: url("../img/hanna-bezsonova-mobile-1.jpg"); }
   .feedback--croatia::after {
-    background-image: url("../img/aleyna-rentz-mobile-1.jpg"); } }
+    background-image: url("../img/robert-thiemann-mobile-1.jpg"); } }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 1.5dppx) and (min-resolution: 144dpi) {
   .feedback--greece::after {
     background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); }
   .feedback--albany::after {
-    background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); }
+    background-image: url("../img/polina-rytova-laptop-1@2x.jpg"); }
   .feedback--macedonia::after {
-    background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); }
+    background-image: url("../img/milana-jovanov-laptop-1@2x.jpg"); }
   .feedback--montenegro::after {
-    background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); }
+    background-image: url("../img/hanna-bezsonova-laptop-1@2x.jpg"); }
   .feedback--croatia::after {
-    background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); } }
+    background-image: url("../img/robert-thiemann-laptop-1@2x.jpg"); } }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 1.5dppx) and (min-resolution: 144dpi) {
   .feedback--greece::after {
     background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); }
   .feedback--albany::after {
-    background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); }
+    background-image: url("../img/polina-rytova-mobile-1@2x.jpg"); }
   .feedback--macedonia::after {
-    background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); }
+    background-image: url("../img/milana-jovanov-mobile-1@2x.jpg"); }
   .feedback--montenegro::after {
-    background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); }
+    background-image: url("../img/hanna-bezsonova-mobile-1@2x.jpg"); }
   .feedback--croatia::after {
-    background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); } }
+    background-image: url("../img/robert-thiemann-mobile-1@2x.jpg"); } }
 
 .feedback__wrapper {
   position: absolute;
@@ -1361,7 +1344,8 @@ input[type="radio"],
               box-sizing: border-box;
       min-width: auto;
       padding: 30px 30px;
-      margin: 97px auto 80px; } }
+      margin: 97px auto 80px;
+      min-height: 350px; } }
   @media (max-width: 767px) {
     .feedback__wrapper {
       -webkit-box-align: center;
@@ -1486,9 +1470,6 @@ input[type="radio"],
               flex-direction: column;
       margin: 0;
       width: auto; } }
-
-.price {
-  position: relative; }
 
 .price__text {
   -webkit-box-ordinal-group: 3;
@@ -2448,7 +2429,8 @@ input[type="radio"],
 .map-zone {
   background-image: url("../img/background-map.png");
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  position: relative; }
   @media (max-width: 1023px) {
     .map-zone {
       background-image: none; } }
@@ -2648,12 +2630,13 @@ input[type="radio"],
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100%;
-  position: relative; }
-  .content--menu-opened .header {
-    position: absolute;
-    height: 100%;
-    width: 100%; }
+  min-height: 100%; }
+  .content--menu-opened {
+    position: relative; }
+    .content--menu-opened .header {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
 
 .content__footer {
   -webkit-box-flex: 0;

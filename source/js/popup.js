@@ -2,21 +2,21 @@
 
 (function () {
   var HIDDEN_TAG = 'visually-hidden';
-  var BUTTON_PLAN = 'plan__button';
-  var plansList = document.querySelector('.price__plans');
+  var BUTTON_BUY = 'popup-button';
+  var buttonBuyZone = document.querySelector('.map-zone');
   var buyPopup = document.querySelector('.buy--info');
   var phoneInputPopup = document.querySelector('#phone-buy');
-  if (plansList && buyPopup) {
+  if (buttonBuyZone && buyPopup) {
     var onEscKeyDown = function (evt) {
       window.utils.isEscEvent(evt, onClosePopup);
     };
 
-    var isPlanButtonClickEvent = function (evt) {
-      if (evt.target.classList.contains(BUTTON_PLAN)) {
-        onClickPlanButton();
+    var isBuyButtonClickEvent = function (evt) {
+      if (evt.target.classList.contains(BUTTON_BUY)) {
+        onClickBuyButton();
       }
     };
-    var onClickPlanButton = function () {
+    var onClickBuyButton = function () {
       buyPopup.classList.remove(HIDDEN_TAG);
 
       document.addEventListener('keydown', onEscKeyDown);
@@ -24,8 +24,8 @@
       if (closePopup) {
         closePopup.addEventListener('click', onClosePopup);
       }
-      plansList.removeEventListener('click', function (evt) {
-        isPlanButtonClickEvent(evt);
+      buttonBuyZone.removeEventListener('click', function (evt) {
+        isBuyButtonClickEvent(evt);
       });
       if (phoneInputPopup) {
         phoneInputPopup.focus();
@@ -33,12 +33,12 @@
     };
     var onClosePopup = function () {
       buyPopup.classList.add(HIDDEN_TAG);
-      plansList.addEventListener('click', function (evt) {
-        isPlanButtonClickEvent(evt);
+      buttonBuyZone.addEventListener('click', function (evt) {
+        isBuyButtonClickEvent(evt);
       });
     };
-    plansList.addEventListener('click', function (evt) {
-      isPlanButtonClickEvent(evt);
+    buttonBuyZone.addEventListener('click', function (evt) {
+      isBuyButtonClickEvent(evt);
     });
   }
 })();

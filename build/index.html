@@ -147,25 +147,25 @@
           <h2 class="visually-hidden">Подробная информация о турах</h2>
           <ul class="tourinfo__list-name">
             <li class="tourinfo__name-item">
-              <button class="tourinfo__button tourinfo__button--active">Греция</button>
+              <button class="tourinfo__button tourinfo__button--active" id="greece">Греция</button>
             </li>
             <li class="tourinfo__name-item">
-              <button class="tourinfo__button">Албания</button>
+              <button class="tourinfo__button" id="albany">Албания</button>
             </li>
             <li class="tourinfo__name-item">
-              <button class="tourinfo__button">Македония</button>
+              <button class="tourinfo__button" id="macedonia">Македония</button>
             </li>
             <li class="tourinfo__name-item">
-              <button class="tourinfo__button">Черногория</button>
+              <button class="tourinfo__button" id="montenegro">Черногория</button>
             </li>
             <li class="tourinfo__name-item">
-              <button class="tourinfo__button">Хорватия</button>
+              <button class="tourinfo__button" id="croatia">Хорватия</button>
             </li>
           </ul>
         </div>
         <div class="tourinfo__list-wrapper">
           <ul class="tourinfo__list">
-            <li class="tourinfo__item tourinfo__item--active" id="greece">
+            <li class="tourinfo__item tourinfo__item--active tourinfo__item--greece">
               <article class="tourinfo__brief brief">
                 <div class="brief__text">
                   <h3 class="brief__title">Греция</h3>
@@ -177,7 +177,7 @@
                     достигающих
                     в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях
                     Метеоры.</p>
-                  <button class="button  brief__button">Купить тур сейчас</button>
+                  <button class="button popup-button brief__button">Купить тур сейчас</button>
                 </div>
                 <div class="brief__image-wrapper brief__image-wrapper--greece"></div>
 
@@ -197,7 +197,7 @@
               </div>
               </article>
             </li>
-            <li class="tourinfo__item" id="albany">
+            <li class="tourinfo__item tourinfo__item--albany">
               <article class="tourinfo__brief brief">
                 <div class="brief__text">
                   <h3 class="brief__title">Албания</h3>
@@ -225,7 +225,7 @@
               </div>
               </article>
             </li>
-            <li class="tourinfo__item" id="macedonia">
+            <li class="tourinfo__item tourinfo__item--macedonia">
               <article class="tourinfo__brief brief">
                 <div class="brief__text">
                   <h3 class="brief__title">Македония</h3>
@@ -255,7 +255,7 @@
               </div>
               </article>
             </li>
-            <li class="tourinfo__item" id="montenegro">
+            <li class="tourinfo__item tourinfo__item--montenegro">
               <article class="tourinfo__brief brief">
                 <div class="brief__text">
                   <h3 class="brief__title">Черногория</h3>
@@ -281,7 +281,7 @@
               </div>
               </article>
             </li>
-            <li class="tourinfo__item" id="croatia">
+            <li class="tourinfo__item tourinfo__item--croatia">
               <article class="tourinfo__brief brief">
                 <div class="brief__text">
                   <h3 class="brief__title">Хорватия</h3>
@@ -341,7 +341,7 @@
                 <li class="plan__item">Завтраки, ужины в отелях и ланчи на природе</li>
                 <li class="plan__item">Экскурсии по удивительно красивым местам Европы</li>
               </ul>
-              <button class="button plan__button">Купить тур сейчас</button>
+              <button class="button popup-button plan__button">Купить тур сейчас</button>
             </li>
             <li class="price__item plan plan--ordinary">
               <div class="plan__text plan__text--ordinary">
@@ -358,38 +358,38 @@
                 <li class="plan__item plan__item--ordinary">Только завтраки в отелях</li>
                 <li class="plan__item plan__item--ordinary">Экскурсии по удивительно красивым местам Европы</li>
               </ul>
-              <button class="button plan__button plan__button--ordinary">Купить тур сейчас</button>
+              <button class="button popup-button plan__button plan__button--ordinary">Купить тур сейчас</button>
             </li>
           </ul>
         </div>
-        <div class="visually-hidden buy buy--info">
-          <button class="close buy__button" type="button" aria-label="Кнопка закрытия формы"></button>
-          <h2 class="buy__title">Купить тур</h2>
-          <form class="buy__form form buy-form" action="">
-            <div class="buy-form__input-list">
-              <div class="buy-form__input field field-buy">
-                <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
-                <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" required="" pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
-                <svg class="field__icon" width="21" height="12">
-                  <use xlink:href="#sprite-star"></use>
-                </svg>
-              </div>
-              <div class="buy-form__input field field-buy">
-                <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
-                <input class="field__input field-buy__input" type="email" name="email" id="email-buy" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
-              </div>
-            </div>
-            <button class="button buy-form__button" type="submit">Отправить</button>
-          </form>
-        </div>
-        <div class="buy success visually-hidden">
-          <button class="close buy__button buy__button--success" type="button" aria-label="Кнопка закрытия отправки формы"></button>
-          <div class="success__wrapper">
-            <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
-            <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
-          </div>
-        </div>
       </section>
+      <div class="visually-hidden buy buy--info">
+        <button class="close buy__button" type="button" aria-label="Кнопка закрытия формы"></button>
+        <h2 class="buy__title">Купить тур</h2>
+        <form class="buy__form form buy-form" action="">
+          <div class="buy-form__input-list">
+            <div class="buy-form__input field field-buy">
+              <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
+              <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" required="" pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
+              <svg class="field__icon" width="21" height="12">
+                <use xlink:href="#sprite-star"></use>
+              </svg>
+            </div>
+            <div class="buy-form__input field field-buy">
+              <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
+              <input class="field__input field-buy__input" type="email" name="email" id="email-buy" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
+            </div>
+          </div>
+          <button class="button buy-form__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="buy success visually-hidden">
+        <button class="close buy__button buy__button--success" type="button" aria-label="Кнопка закрытия отправки формы"></button>
+        <div class="success__wrapper">
+          <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
+          <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
+        </div>
+      </div>
     </div>
     <section class="consult">
       <div class="wrapper consult__wrapper">

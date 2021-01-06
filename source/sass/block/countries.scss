@@ -53,11 +53,20 @@
       display: block;
       position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
       border: #ffffff solid 1px;
-      margin-left: 60px;
-      padding: 30px 25px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 32px 10%;
       margin-top: 152px;
       z-index: 2;
+      width: 74%;
+      box-sizing: border-box;
+
+      @media (max-width: $width-desktop) {
+        width: 85%;
+      }
     }
 
     &::after {
@@ -76,19 +85,6 @@
     width: 288px;
     height: 425px;
   }
-
-  @media (max-width: $width-tablet) {
-    &:hover {
-      ~ .countries__hoover {
-        @include reset-el;
-      }
-
-      &::after {
-        @include reset-el;
-      }
-    }
-    margin: 0;
-  }
 }
 
 .countries__hoover {
@@ -96,8 +92,9 @@
 }
 
 .countries__more {
-  @include text-sets(14px,17px,500);
+  @include text-sets(14px, 17px, 500);
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
   margin: 0;
 }
@@ -126,7 +123,7 @@
 }
 
 .countries__name {
-  @include text-sets(24px,29px,500);
+  @include text-sets(24px, 29px, 500);
   color: #2c2e3f;
   text-align: center;
   margin: 0;

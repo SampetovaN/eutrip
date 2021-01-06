@@ -21,25 +21,25 @@
 
     &--albany {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1.jpg");
+        background-image: url("../img/polina-rytova-laptop-1.jpg");
       }
     }
 
     &--macedonia {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1.jpg");
+        background-image: url("../img/milana-jovanov-laptop-1.jpg");
       }
     }
 
     &--montenegro {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1.jpg");
+        background-image: url("../img/hanna-bezsonova-laptop-1.jpg");
       }
     }
 
     &--croatia {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1.jpg");
+        background-image: url("../img/robert-thiemann-laptop-1.jpg");
       }
     }
   }
@@ -58,25 +58,25 @@
 
     &--albany {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+        background-image: url("../img/polina-rytova-mobile-1.jpg");
       }
     }
 
     &--macedonia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+        background-image: url("../img/milana-jovanov-mobile-1.jpg");
       }
     }
 
     &--montenegro {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+        background-image: url("../img/hanna-bezsonova-mobile-1.jpg");
       }
     }
 
     &--croatia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1.jpg");
+        background-image: url("../img/robert-thiemann-mobile-1.jpg");
       }
     }
   }
@@ -92,25 +92,25 @@
 
     &--albany {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
+        background-image: url("../img/polina-rytova-laptop-1@2x.jpg");
       }
     }
 
     &--macedonia {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
+        background-image: url("../img/milana-jovanov-laptop-1@2x.jpg");
       }
     }
 
     &--montenegro {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
+        background-image: url("../img/hanna-bezsonova-laptop-1@2x.jpg");
       }
     }
 
     &--croatia {
       &::after {
-        background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg");
+        background-image: url("../img/robert-thiemann-laptop-1@2x.jpg");
       }
     }
   }
@@ -126,25 +126,25 @@
 
     &--albany {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/polina-rytova-mobile-1@2x.jpg");
       }
     }
 
     &--macedonia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/milana-jovanov-mobile-1@2x.jpg");
       }
     }
 
     &--montenegro {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/hanna-bezsonova-mobile-1@2x.jpg");
       }
     }
 
     &--croatia {
       &::after {
-        background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg");
+        background-image: url("../img/robert-thiemann-mobile-1@2x.jpg");
       }
     }
   }
@@ -170,6 +170,7 @@
     min-width: auto;
     padding: 30px 30px;
     margin: 97px auto 80px;
+    min-height: 350px;
   }
 
   @media (max-width: $width-tablet) {

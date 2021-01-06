@@ -2,6 +2,51 @@
 
 
 (function () {
+  var COUNTRY_LINK_TAG = 'countries__link';
+  var countriesList = document.querySelector('.countries');
+  var tourInfoItems = document.querySelectorAll('.tourinfo__item');
+  var tourInfoButtons = document.querySelectorAll('.tourinfo__button');
+  if (countriesList && tourInfoItems && tourInfoButtons) {
+    var isCountryLinkClickEvent = function (evt) {
+      if (evt.target.classList.contains(COUNTRY_LINK_TAG)) {
+        onClickLink(evt);
+      }
+    };
+    var preprocessLinkHref = function (hrefLink) {
+      var ancor = hrefLink.match(window.utils.REGEX_ANCOR)[0];
+      return ancor.slice(1);
+    };
+    var findButton = function (href, button) {
+      return button.id === href;
+    };
+    var onClickLink = function (evt) {
+      window.utils.changeCountryInfo();
+      var href = preprocessLinkHref(evt.target.href);
+      var buttonNewActive = window.utils.getArray(tourInfoButtons).filter(function (button) {
+        return findButton(href, button);
+      })[0];
+      if (buttonNewActive) {
+        buttonNewActive.classList.add(window.utils.ACTIVE_BUTTON_TAG);
+      }
+      var itemNewActive = window.utils.getArray(tourInfoItems).filter(function (item) {
+        return window.utils.findItem(href, item);
+      })[0];
+
+      if (itemNewActive) {
+        itemNewActive.classList.add(window.utils.ACTIVE_ITEM_TAG);
+      }
+    };
+
+    countriesList.addEventListener('click', function (evt) {
+      isCountryLinkClickEvent(evt);
+    });
+  }
+
+})();
+
+
+
+(function () {
   var TAG_ERROR = 'field--error';
   var inputs = document.querySelectorAll('.field input');
   if (inputs) {
@@ -93,21 +138,21 @@
 
 (function () {
   var HIDDEN_TAG = 'visually-hidden';
-  var BUTTON_PLAN = 'plan__button';
-  var plansList = document.querySelector('.price__plans');
+  var BUTTON_BUY = 'popup-button';
+  var buttonBuyZone = document.querySelector('.map-zone');
   var buyPopup = document.querySelector('.buy--info');
   var phoneInputPopup = document.querySelector('#phone-buy');
-  if (plansList && buyPopup) {
+  if (buttonBuyZone && buyPopup) {
     var onEscKeyDown = function (evt) {
       window.utils.isEscEvent(evt, onClosePopup);
     };
 
-    var isPlanButtonClickEvent = function (evt) {
-      if (evt.target.classList.contains(BUTTON_PLAN)) {
-        onClickPlanButton();
+    var isBuyButtonClickEvent = function (evt) {
+      if (evt.target.classList.contains(BUTTON_BUY)) {
+        onClickBuyButton();
       }
-    }
-    var onClickPlanButton = function () {
+    };
+    var onClickBuyButton = function () {
       buyPopup.classList.remove(HIDDEN_TAG);
 
       document.addEventListener('keydown', onEscKeyDown);
@@ -115,21 +160,21 @@
       if (closePopup) {
         closePopup.addEventListener('click', onClosePopup);
       }
-      plansList.removeEventListener('click', function (evt) {
-        isPlanButtonClickEvent(evt);
+      buttonBuyZone.removeEventListener('click', function (evt) {
+        isBuyButtonClickEvent(evt);
       });
       if (phoneInputPopup) {
         phoneInputPopup.focus();
       }
-    }
+    };
     var onClosePopup = function () {
       buyPopup.classList.add(HIDDEN_TAG);
-      plansList.addEventListener('click', function (evt) {
-        isPlanButtonClickEvent(evt);
+      buttonBuyZone.addEventListener('click', function (evt) {
+        isBuyButtonClickEvent(evt);
       });
-    }
-    plansList.addEventListener('click', function (evt) {
-      isPlanButtonClickEvent(evt);
+    };
+    buttonBuyZone.addEventListener('click', function (evt) {
+      isBuyButtonClickEvent(evt);
     });
   }
 })();
@@ -137,16 +182,82 @@
 
 
 (function () {
-  var ESCAPE_BUTTON = 'Escape';
+  var BUTTON_TAG = 'tourinfo__button';
+  var tourInfoButtonsList = document.querySelector('.tourinfo__list-name');
+  var tourInfoItems = document.querySelectorAll('.tourinfo__item');
+  if (tourInfoButtonsList && tourInfoItems) {
+    var isTourinfoButtonClickEvent = function (evt) {
+      if (evt.target.classList.contains(BUTTON_TAG)) {
+        if (!evt.target.classList.contains(window.utils.ACTIVE_BUTTON_TAG)) {
+          onClickButton(evt);
+        }
+      }
+    };
 
+    var onClickButton = function (evt) {
+      window.utils.changeCountryInfo();
+      evt.target.classList.add(window.utils.ACTIVE_BUTTON_TAG);
+      var itemNewActive = Array.from(tourInfoItems).filter(function (item) {
+        return window.utils.findItem(evt.target.id, item);
+      })[0];
+
+      if (itemNewActive) {
+        itemNewActive.classList.add(window.utils.ACTIVE_ITEM_TAG);
+      }
+    };
+
+    tourInfoButtonsList.addEventListener('click', function (evt) {
+      isTourinfoButtonClickEvent(evt);
+    });
+  }
+
+})();
+
+
+
+(function () {
+  var ACTIVE_ITEM_TAG = 'tourinfo__item--active';
+  var ACTIVE_BUTTON_TAG = 'tourinfo__button--active';
+  var ESCAPE_BUTTON = 'Escape';
+  var REGEX_ANCOR = /#.*/gi;
+  var tourInfoButtons = document.querySelectorAll('.tourinfo__button');
+  var tourInfoItems = document.querySelectorAll('.tourinfo__item');
   var isEscEvent = function (evt, action) {
     if (evt.key === ESCAPE_BUTTON) {
       evt.preventDefault();
       action(evt);
     }
   };
+  var getButtonActive = function (button) {
+    return button.classList.contains(ACTIVE_BUTTON_TAG);
+  };
+  var getItemActive = function (item) {
+    return item.classList.contains(window.utils.ACTIVE_ITEM_TAG);
+  };
+
+  var changeCountryInfo = function () {
+    var buttonActive = getArray(tourInfoButtons).filter(getButtonActive)[0];
+    var itemActive = getArray(tourInfoItems).filter(getItemActive)[0];
+    buttonActive.classList.remove(ACTIVE_BUTTON_TAG);
+    itemActive.classList.remove(ACTIVE_ITEM_TAG);
+  };
+
+  var getArray = function (nodes) {
+    return Array.from(nodes);
+  };
+
+  var findItem = function (activeItem, item) {
+    return item.classList.toString().match(activeItem) ? item : null;
+  };
 
   window.utils = {
-    isEscEvent: isEscEvent
+    ACTIVE_ITEM_TAG: ACTIVE_ITEM_TAG,
+    ACTIVE_BUTTON_TAG: ACTIVE_BUTTON_TAG,
+    REGEX_ANCOR: REGEX_ANCOR,
+    isEscEvent: isEscEvent,
+    changeCountryInfo: changeCountryInfo,
+    getArray: getArray,
+    findItem: findItem
   };
+
 })();
