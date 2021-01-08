@@ -19,6 +19,7 @@ var wrapper = require('gulp-wrapper');
 var replace = require('gulp-replace');
 var webp = require('gulp-webp');
 
+
 gulp.task('clean', function () {
   return del('build');
 });
@@ -85,6 +86,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 });
+
 
 gulp.task('server', function () {
   server.init({

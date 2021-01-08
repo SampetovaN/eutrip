@@ -49,7 +49,7 @@
   margin: 0 1%;
 
   &:hover {
-    ~ .countries__hoover {
+    .countries__hoover {
       display: block;
       position: absolute;
       top: 0;

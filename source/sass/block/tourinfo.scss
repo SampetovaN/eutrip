@@ -1,3 +1,4 @@
+
 .tourinfo__button-wrapper {
   margin: 0 auto;
   padding-right: 40px * 1.7;
@@ -18,6 +19,7 @@
 
 .tourinfo__button {
   cursor: pointer;
+  outline: none;
 
   @include text-sets(20px,24px,500);
   border: none;
@@ -33,6 +35,7 @@
   }
 }
 
+
 .tourinfo__list-name {
   @include list-refresh;
   display: flex;
@@ -45,7 +48,13 @@
   min-width: 689px;
 
   @media (max-width: $width-desktop) {
-    overflow: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     justify-content: unset;
     width: auto;
     min-width: auto;

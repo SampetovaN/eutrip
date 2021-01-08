@@ -329,6 +329,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+.body-lock {
+  overflow-y: scroll;
+  position: fixed; }
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"],
 input[type="radio"],
@@ -909,7 +913,7 @@ input[type="radio"],
   position: relative;
   display: block;
   margin: 0 1%; }
-  .countries__link:hover ~ .countries__hoover {
+  .countries__link:hover .countries__hoover {
     display: block;
     position: absolute;
     top: 0;
@@ -925,7 +929,7 @@ input[type="radio"],
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
     @media (max-width: 1023px) {
-      .countries__link:hover ~ .countries__hoover {
+      .countries__link:hover .countries__hoover {
         width: 85%; } }
   .countries__link:hover::after {
     content: "";
@@ -1001,6 +1005,7 @@ input[type="radio"],
 
 .tourinfo__button {
   cursor: pointer;
+  outline: none;
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -1029,7 +1034,9 @@ input[type="radio"],
   min-width: 689px; }
   @media (max-width: 1023px) {
     .tourinfo__list-name {
-      overflow: hidden;
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
       -webkit-box-pack: unset;
           -ms-flex-pack: unset;
               justify-content: unset;
@@ -1037,7 +1044,9 @@ input[type="radio"],
       min-width: auto;
       max-width: none;
       padding-bottom: 1.7%;
-      margin-bottom: 4.9%; } }
+      margin-bottom: 4.9%; }
+      .tourinfo__list-name::-webkit-scrollbar {
+        display: none; } }
   @media (max-width: 767px) {
     .tourinfo__list-name {
       padding-bottom: 5.7%;
@@ -1266,56 +1275,30 @@ input[type="radio"],
       height: 416px;
       width: 100%;
       z-index: -1;
-      top: -80px; }
+      top: -80px;
+      background-position: center; }
     .feedback--greece::after {
-      background-image: url("../img/aleyna-rentz-laptop-1.jpg"); }
+      background-image: url("../img/aleyna-rentz-desktop-1.jpg"); }
     .feedback--albany::after {
-      background-image: url("../img/polina-rytova-laptop-1.jpg"); }
+      background-image: url("../img/polina-rytova-desktop-1.jpg"); }
     .feedback--macedonia::after {
-      background-image: url("../img/milana-jovanov-laptop-1.jpg"); }
+      background-image: url("../img/milana-jovanov-desktop-1.jpg"); }
     .feedback--montenegro::after {
-      background-image: url("../img/hanna-bezsonova-laptop-1.jpg"); }
+      background-image: url("../img/hanna-bezsonova-desktop-1.jpg"); }
     .feedback--croatia::after {
-      background-image: url("../img/robert-thiemann-laptop-1.jpg"); } }
-
-@media (max-width: 767px) {
-  .feedback::after {
-    height: 433px;
-    top: -57px; }
-  .feedback--greece::after {
-    background-image: url("../img/aleyna-rentz-mobile-1.jpg"); }
-  .feedback--albany::after {
-    background-image: url("../img/polina-rytova-mobile-1.jpg"); }
-  .feedback--macedonia::after {
-    background-image: url("../img/milana-jovanov-mobile-1.jpg"); }
-  .feedback--montenegro::after {
-    background-image: url("../img/hanna-bezsonova-mobile-1.jpg"); }
-  .feedback--croatia::after {
-    background-image: url("../img/robert-thiemann-mobile-1.jpg"); } }
+      background-image: url("../img/robert-thiemann-desktop-1.jpg"); } }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 1.5dppx) and (min-resolution: 144dpi) {
   .feedback--greece::after {
-    background-image: url("../img/aleyna-rentz-laptop-1@2x.jpg"); }
+    background-image: url("../img/aleyna-rentz-desktop-1@2x.jpg"); }
   .feedback--albany::after {
-    background-image: url("../img/polina-rytova-laptop-1@2x.jpg"); }
+    background-image: url("../img/polina-rytova-desktop-1@2x.jpg"); }
   .feedback--macedonia::after {
-    background-image: url("../img/milana-jovanov-laptop-1@2x.jpg"); }
+    background-image: url("../img/milana-jovanov-desktop-1@2x.jpg"); }
   .feedback--montenegro::after {
-    background-image: url("../img/hanna-bezsonova-laptop-1@2x.jpg"); }
+    background-image: url("../img/hanna-bezsonova-desktop-1@2x.jpg"); }
   .feedback--croatia::after {
-    background-image: url("../img/robert-thiemann-laptop-1@2x.jpg"); } }
-
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 1.5dppx) and (min-resolution: 144dpi) {
-  .feedback--greece::after {
-    background-image: url("../img/aleyna-rentz-mobile-1@2x.jpg"); }
-  .feedback--albany::after {
-    background-image: url("../img/polina-rytova-mobile-1@2x.jpg"); }
-  .feedback--macedonia::after {
-    background-image: url("../img/milana-jovanov-mobile-1@2x.jpg"); }
-  .feedback--montenegro::after {
-    background-image: url("../img/hanna-bezsonova-mobile-1@2x.jpg"); }
-  .feedback--croatia::after {
-    background-image: url("../img/robert-thiemann-mobile-1@2x.jpg"); } }
+    background-image: url("../img/robert-thiemann-desktop-1@2x.jpg"); } }
 
 .feedback__wrapper {
   position: absolute;
@@ -2043,6 +2026,16 @@ input[type="radio"],
     .form__button {
       width: 100%;
       padding: 20px 0; } }
+  .form__button--buy {
+    width: 176px;
+    padding: 18px 2%;
+    display: block;
+    margin-left: 35px; }
+    @media (max-width: 1023px) {
+      .form__button--buy {
+        width: 100%;
+        padding: 19px 0;
+        margin: 0; } }
 
 .contacts {
   padding: 0; }
@@ -2313,9 +2306,11 @@ input[type="radio"],
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5); }
   .buy--info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2341,10 +2336,12 @@ input[type="radio"],
     background-image: url("../img/buy-tour@2x.jpg");
     background-size: 50% auto; } }
 
-.buy__button--success {
-  text-align: right;
-  -ms-flex-item-align: end;
-      align-self: flex-end; }
+.buy__button {
+  display: block; }
+  .buy__button--success {
+    text-align: right;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
 
 .buy__title {
   font-size: 25px;
@@ -2389,17 +2386,6 @@ input[type="radio"],
 .buy-form__input {
   margin-bottom: 20px; }
 
-.buy-form__button {
-  width: 176px;
-  padding: 18px 2%;
-  display: block;
-  margin-left: 35px; }
-  @media (max-width: 1023px) {
-    .buy-form__button {
-      width: 100%;
-      padding: 19px 0;
-      margin: 0; } }
-
 .success {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2419,7 +2405,8 @@ input[type="radio"],
   color: #48494d;
   width: 400px;
   text-align: center;
-  padding-top: 133px; }
+  padding-top: 133px;
+  margin: auto; }
   @media (max-width: 1023px) {
     .success__message {
       width: 100%;
@@ -2429,8 +2416,7 @@ input[type="radio"],
 .map-zone {
   background-image: url("../img/background-map.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative; }
+  background-size: 100%; }
   @media (max-width: 1023px) {
     .map-zone {
       background-image: none; } }

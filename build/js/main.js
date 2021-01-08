@@ -49,6 +49,7 @@
 (function () {
   var TAG_ERROR = 'field--error';
   var inputs = document.querySelectorAll('.field input');
+  var forms = document.querySelectorAll('.form');
   if (inputs) {
     var checkInput = function (input, closest) {
       if (input.validity.patternMismatch) {
@@ -60,6 +61,17 @@
     inputs.forEach(function (input) {
       input.addEventListener('input', function (evt) {
         checkInput(input, evt.target.closest('.field'));
+      });
+    });
+  }
+  if (forms) {
+    var onUploadSuccess = function () {
+      window.message.showUploadSuccess();
+    };
+    forms.forEach(function (form) {
+      form.addEventListener('submit', function (evt) {
+        onUploadSuccess();
+        evt.preventDefault();
       });
     });
   }
@@ -137,45 +149,110 @@
 
 
 (function () {
-  var HIDDEN_TAG = 'visually-hidden';
-  var BUTTON_BUY = 'popup-button';
+  var buySuccessPopup = document.querySelector('.buy--success');
+  var buyPopup = document.querySelector('.buy--info');
+  var closeButton = document.querySelector('.buy__button--success');
+  var main = document.querySelector('.main');
+  if (buySuccessPopup && closeButton && main) {
+    var onEscKeyDown = function (evt) {
+      window.utils.isEscEvent(evt, onClickCloseButton);
+    };
+    var onClickCloseButton = function () {
+      buySuccessPopup.classList.add(window.utils.HIDDEN_TAG);
+      main.removeEventListener('click', onClickCloseButton);
+
+      closeButton.removeEventListener('click', onClickCloseButton);
+      window.utils.unfocusBlock(buySuccessPopup);
+      window.scrollBlock.unset();
+    };
+    var showUploadSuccess = function () {
+      if (buyPopup && !buyPopup.classList.contains(window.utils.HIDDEN_TAG)) {
+        buyPopup.classList.add(window.utils.HIDDEN_TAG);
+        window.scrollBlock.unset();
+      }
+      window.scrollBlock.set();
+      buySuccessPopup.classList.remove(window.utils.HIDDEN_TAG);
+      document.addEventListener('keydown', onEscKeyDown);
+      closeButton.addEventListener('click', onClickCloseButton);
+      main.addEventListener('click', onClickCloseButton);
+      window.utils.focusBlock(buySuccessPopup);
+    };
+    window.message = {
+      showUploadSuccess: showUploadSuccess
+    };
+  }
+})();
+
+
+
+(function () {
   var buttonBuyZone = document.querySelector('.map-zone');
   var buyPopup = document.querySelector('.buy--info');
-  var phoneInputPopup = document.querySelector('#phone-buy');
+  var closeButton = document.querySelector('.buy__button--info');
   if (buttonBuyZone && buyPopup) {
     var onEscKeyDown = function (evt) {
-      window.utils.isEscEvent(evt, onClosePopup);
+      window.utils.isEscEvent(evt, onCloseButton);
     };
-
     var isBuyButtonClickEvent = function (evt) {
-      if (evt.target.classList.contains(BUTTON_BUY)) {
+      if (evt.target.classList.contains(window.utils.BUTTON_BUY)) {
         onClickBuyButton();
       }
     };
     var onClickBuyButton = function () {
-      buyPopup.classList.remove(HIDDEN_TAG);
-
+      buyPopup.classList.remove(window.utils.HIDDEN_TAG);
+      window.scrollBlock.set();
       document.addEventListener('keydown', onEscKeyDown);
-      var closePopup = document.querySelector('.buy__button');
-      if (closePopup) {
-        closePopup.addEventListener('click', onClosePopup);
+      if (closeButton) {
+        closeButton.addEventListener('click', onCloseButton);
       }
-      buttonBuyZone.removeEventListener('click', function (evt) {
-        isBuyButtonClickEvent(evt);
-      });
-      if (phoneInputPopup) {
-        phoneInputPopup.focus();
+      window.utils.focusBlock(buyPopup);
+      buttonBuyZone.addEventListener('click', onCloseButton);
+      buttonBuyZone.removeEventListener('click', isBuyButtonClickEvent);
+    };
+    var onCloseButton = function () {
+      buyPopup.classList.add(window.utils.HIDDEN_TAG);
+      window.scrollBlock.unset();
+      buttonBuyZone.removeEventListener('click', onCloseButton);
+      buttonBuyZone.addEventListener('click', isBuyButtonClickEvent);
+      window.utils.unfocusBlock(buyPopup);
+    };
+    buttonBuyZone.addEventListener('click', isBuyButtonClickEvent);
+  }
+})();
+
+
+
+(function () {
+  var BODY_LOCK_CLASS = 'body-lock';
+  var body = document.querySelector('body');
+  if (body) {
+
+    var existVerticalScroll = function () {
+      return document.body.offsetHeight > window.innerHeight;
+    };
+
+    var getBodyScrollTop = function () {
+      return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+    };
+
+    var setScrollBlock = function () {
+      body.dataset.scrollY = getBodyScrollTop();
+      if (existVerticalScroll()) {
+        body.classList.add(BODY_LOCK_CLASS);
+        body.style.top = '-' + body.dataset.scrollY + 'px';
       }
     };
-    var onClosePopup = function () {
-      buyPopup.classList.add(HIDDEN_TAG);
-      buttonBuyZone.addEventListener('click', function (evt) {
-        isBuyButtonClickEvent(evt);
-      });
+
+    var unsetScrollBlock = function () {
+      if (existVerticalScroll()) {
+        body.classList.remove(BODY_LOCK_CLASS);
+        window.scrollTo(0, body.dataset.scrollY);
+      }
     };
-    buttonBuyZone.addEventListener('click', function (evt) {
-      isBuyButtonClickEvent(evt);
-    });
+    window.scrollBlock = {
+      set: setScrollBlock,
+      unset: unsetScrollBlock
+    };
   }
 })();
 
@@ -218,10 +295,13 @@
 (function () {
   var ACTIVE_ITEM_TAG = 'tourinfo__item--active';
   var ACTIVE_BUTTON_TAG = 'tourinfo__button--active';
+  var HIDDEN_TAG = 'visually-hidden';
   var ESCAPE_BUTTON = 'Escape';
   var REGEX_ANCOR = /#.*/gi;
+  var BUTTON_BUY = 'popup-button';
   var tourInfoButtons = document.querySelectorAll('.tourinfo__button');
   var tourInfoItems = document.querySelectorAll('.tourinfo__item');
+  var POPUP_CLASS = '.buy';
   var isEscEvent = function (evt, action) {
     if (evt.key === ESCAPE_BUTTON) {
       evt.preventDefault();
@@ -250,14 +330,31 @@
     return item.classList.toString().match(activeItem) ? item : null;
   };
 
+  var isClosestPopupTag = function (item) {
+    return item.closest(POPUP_CLASS);
+  };
+
+  var focusBlock = function (block) {
+    block.tabIndex = 1;
+    block.focus();
+  };
+  var unfocusBlock = function (block) {
+    block.tabIndex = 0;
+  };
+
   window.utils = {
     ACTIVE_ITEM_TAG: ACTIVE_ITEM_TAG,
     ACTIVE_BUTTON_TAG: ACTIVE_BUTTON_TAG,
     REGEX_ANCOR: REGEX_ANCOR,
+    HIDDEN_TAG: HIDDEN_TAG,
+    BUTTON_BUY: BUTTON_BUY,
     isEscEvent: isEscEvent,
     changeCountryInfo: changeCountryInfo,
     getArray: getArray,
-    findItem: findItem
+    findItem: findItem,
+    isClosestPopupTag: isClosestPopupTag,
+    focusBlock: focusBlock,
+    unfocusBlock: unfocusBlock
   };
 
 })();

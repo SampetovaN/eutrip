@@ -66,10 +66,11 @@
 
                 <img class="countries__image" src="img/aleyna-rentz-desktop.jpg" srcset="img/aleyna-rentz-desktop.jpg 1x, img/aleyna-rentz-desktop@2x.jpg 2x" width="350" height="430" alt="Греция">
               </picture>
+              <div class="countries__hoover">
+                <p class="countries__more">Смотреть подробнее</p>
+              </div>
             </a>
-            <div class="countries__hoover">
-              <p class="countries__more">Смотреть подробнее</p>
-            </div>
+
             <div class="countries__block">
               <h3 class="countries__name">Греция</h3>
             </div>
@@ -86,10 +87,11 @@
 
                 <img class="countries__image" src="img/polina-rytova-desktop.jpg" srcset="img/polina-rytova-desktop.jpg 1x, img/polina-rytova-desktop@2x.jpg 2x" width="350" height="430" alt="Албания">
               </picture>
+              <div class="countries__hoover">
+                <p class="countries__more">Смотреть подробнее</p>
+              </div>
             </a>
-            <div class="countries__hoover">
-              <p class="countries__more">Смотреть подробнее</p>
-            </div>
+
             <div class="countries__block">
               <h3 class="countries__name">Албания</h3>
             </div>
@@ -106,10 +108,10 @@
 
                 <img class="countries__image" src="img/milana-jovanov-desktop.jpg" srcset="img/milana-jovanov-desktop.jpg 1x, img/milana-jovanov-desktop@2x.jpg 2x" width="350" height="430" alt="Македония">
               </picture>
+              <div class="countries__hoover">
+                <p class="countries__more">Смотреть подробнее</p>
+              </div>
             </a>
-            <div class="countries__hoover">
-              <p class="countries__more">Смотреть подробнее</p>
-            </div>
             <div class="countries__block">
               <h3 class="countries__name">Македония</h3>
             </div>
@@ -126,10 +128,10 @@
 
                 <img class="countries__image" src="img/hanna-bezsonova-desktop.jpg" srcset="img/hanna-bezsonova-desktop.jpg 1x, img/hanna-bezsonova-desktop@2x.jpg 2x" width="350" height="430" alt="Черногория">
               </picture>
+              <div class="countries__hoover">
+                <p class="countries__more">Смотреть подробнее</p>
+              </div>
             </a>
-            <div class="countries__hoover">
-              <p class="countries__more">Смотреть подробнее</p>
-            </div>
             <div class="countries__block">
               <h3 class="countries__name">Черногория</h3>
             </div>
@@ -146,10 +148,10 @@
 
                 <img loading="lazy" class="countries__image" src="img/robert-thiemann-desktop.jpg" srcset="img/robert-thiemann-desktop.jpg 1x, img/robert-thiemann-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия">
               </picture>
+              <div class="countries__hoover">
+                <p class="countries__more">Смотреть подробнее</p>
+              </div>
             </a>
-            <div class="countries__hoover">
-              <p class="countries__more">Смотреть подробнее</p>
-            </div>
             <div class="countries__block">
               <h3 class="countries__name">Хорватия</h3>
             </div>
@@ -379,33 +381,6 @@
           </ul>
         </div>
       </section>
-      <div class="visually-hidden buy buy--info">
-        <button class="close buy__button" type="button" aria-label="Кнопка закрытия формы"></button>
-        <h2 class="buy__title">Купить тур</h2>
-        <form class="buy__form form buy-form" action="">
-          <div class="buy-form__input-list">
-            <div class="buy-form__input field field-buy">
-              <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
-              <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" required pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
-              <svg class="field__icon" width="21" height="12">
-                <use xlink:href="#sprite-star"></use>
-              </svg>
-            </div>
-            <div class="buy-form__input field field-buy">
-              <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
-              <input class="field__input field-buy__input" type="email" name="email" id="email-buy"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
-            </div>
-          </div>
-          <button class="button buy-form__button" type="submit">Отправить</button>
-        </form>
-      </div>
-      <div class="buy success visually-hidden">
-        <button class="close buy__button buy__button--success" type="button" aria-label="Кнопка закрытия отправки формы"></button>
-        <div class="success__wrapper">
-          <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
-          <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
-        </div>
-      </div>
     </div>
     <section class="consult">
       <div class="wrapper consult__wrapper">
@@ -489,6 +464,33 @@
       </div>
     </div>
   </footer>
+    <section class="visually-hidden buy buy--info">
+      <button class="close buy__button buy__button--info" type="button" aria-label="Кнопка закрытия формы"></button>
+      <h2 class="buy__title">Купить тур</h2>
+      <form class="buy__form form buy-form" action="">
+        <div class="buy-form__input-list">
+          <div class="buy-form__input field field-buy">
+            <label class="field__label field__label--required visually-hidden" for="phone-buy">Телефон:</label>
+            <input class="field__input field__input--phone field-buy__input" type="tel" name="phone" id="phone-buy" required pattern="^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$" placeholder="+7 Введите 10 цифр номера">
+            <svg class="field__icon" width="21" height="12">
+              <use xlink:href="#sprite-star"></use>
+            </svg>
+          </div>
+          <div class="buy-form__input field field-buy">
+            <label class="field__label visually-hidden" for="email-buy">Электронная почта:</label>
+            <input class="field__input field-buy__input" type="email" name="email" id="email-buy"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail">
+          </div>
+        </div>
+        <button class="button form__button form__button--buy" type="submit">Отправить</button>
+      </form>
+    </section>
+    <section class="visually-hidden buy buy--success">
+      <button class="close buy__button buy__button--success" type="button" aria-label="Кнопка закрытия отправки формы"></button>
+      <div class="success__wrapper">
+        <h2 class="visually-hidden">Заявка на покупку тура принята</h2>
+        <p class="success__message">Форма успешно отправлена, спасибо! :)</p>
+      </div>
+    </section>
 </div>
 <script src='js/main.js'></script>
 </body>

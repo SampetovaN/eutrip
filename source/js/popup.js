@@ -1,44 +1,36 @@
 'use strict';
 
 (function () {
-  var HIDDEN_TAG = 'visually-hidden';
-  var BUTTON_BUY = 'popup-button';
   var buttonBuyZone = document.querySelector('.map-zone');
   var buyPopup = document.querySelector('.buy--info');
-  var phoneInputPopup = document.querySelector('#phone-buy');
+  var closeButton = document.querySelector('.buy__button--info');
   if (buttonBuyZone && buyPopup) {
     var onEscKeyDown = function (evt) {
-      window.utils.isEscEvent(evt, onClosePopup);
+      window.utils.isEscEvent(evt, onCloseButton);
     };
-
     var isBuyButtonClickEvent = function (evt) {
-      if (evt.target.classList.contains(BUTTON_BUY)) {
+      if (evt.target.classList.contains(window.utils.BUTTON_BUY)) {
         onClickBuyButton();
       }
     };
     var onClickBuyButton = function () {
-      buyPopup.classList.remove(HIDDEN_TAG);
-
+      buyPopup.classList.remove(window.utils.HIDDEN_TAG);
+      window.scrollBlock.set();
       document.addEventListener('keydown', onEscKeyDown);
-      var closePopup = document.querySelector('.buy__button');
-      if (closePopup) {
-        closePopup.addEventListener('click', onClosePopup);
+      if (closeButton) {
+        closeButton.addEventListener('click', onCloseButton);
       }
-      buttonBuyZone.removeEventListener('click', function (evt) {
-        isBuyButtonClickEvent(evt);
-      });
-      if (phoneInputPopup) {
-        phoneInputPopup.focus();
-      }
+      window.utils.focusBlock(buyPopup);
+      buttonBuyZone.addEventListener('click', onCloseButton);
+      buttonBuyZone.removeEventListener('click', isBuyButtonClickEvent);
     };
-    var onClosePopup = function () {
-      buyPopup.classList.add(HIDDEN_TAG);
-      buttonBuyZone.addEventListener('click', function (evt) {
-        isBuyButtonClickEvent(evt);
-      });
+    var onCloseButton = function () {
+      buyPopup.classList.add(window.utils.HIDDEN_TAG);
+      window.scrollBlock.unset();
+      buttonBuyZone.removeEventListener('click', onCloseButton);
+      buttonBuyZone.addEventListener('click', isBuyButtonClickEvent);
+      window.utils.unfocusBlock(buyPopup);
     };
-    buttonBuyZone.addEventListener('click', function (evt) {
-      isBuyButtonClickEvent(evt);
-    });
+    buttonBuyZone.addEventListener('click', isBuyButtonClickEvent);
   }
 })();
