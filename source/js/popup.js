@@ -11,6 +11,7 @@
     var isBuyButtonClickEvent = function (evt) {
       if (evt.target.classList.contains(window.utils.BUTTON_BUY)) {
         onClickBuyButton();
+
       }
     };
     var onClickBuyButton = function () {

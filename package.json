@@ -6,13 +6,15 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-latest": "^6.24.1",
     "browser-sync": "2.26.x",
     "del": "^6.0.0",
     "eclint": "^2.8.1",
     "eslint": "^7.15.0",
     "eslint-config-htmlacademy": "^0.6.0",
     "gulp": "4.0.x",
-    "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
@@ -30,7 +32,9 @@
     "stylelint": "^10.1.0",
     "stylelint-config-htmlacademy": "0.1.x",
     "stylelint-config-standard": "^20.0.0",
-    "svgstore": "^3.0.0-2"
+    "svgstore": "^3.0.0-2",
+    "webpack": "^5.12.2",
+    "webpack-stream": "^6.1.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

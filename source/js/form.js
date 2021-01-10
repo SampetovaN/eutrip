@@ -19,12 +19,13 @@
     });
   }
   if (forms) {
-    var onUploadSuccess = function () {
+    var onUploadSuccess = function (form) {
+      form.reset();
       window.message.showUploadSuccess();
     };
     forms.forEach(function (form) {
       form.addEventListener('submit', function (evt) {
-        onUploadSuccess();
+        onUploadSuccess(form);
         evt.preventDefault();
       });
     });

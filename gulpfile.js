@@ -14,10 +14,12 @@ var include = require('posthtml-include');
 var imagemin = require('gulp-imagemin');
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
-var concat = require('gulp-concat');
 var wrapper = require('gulp-wrapper');
 var replace = require('gulp-replace');
 var webp = require('gulp-webp');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
+var webpackConfig = require('./webpack.config.js');
 
 
 gulp.task('clean', function () {
@@ -57,11 +59,11 @@ gulp.task('copy', function () {
 });
 
 gulp.task('script', function () {
-  return gulp.src(['source/js/*.js','!source/js/vendor.js'])
-    .pipe(replace(/['']use strict[''];/g, ''))
-    .pipe(concat('main.js'))
-    .pipe(wrapper({ header: '\'use strict\';\n' }))
-    .pipe(gulp.dest('build/js'))
+  return gulp.src(['source/js/*.js'])
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(replace(/['"]use strict['"];/g, ''))
+    .pipe(wrapper({header: '\'use strict\';\n' }))
+    .pipe(gulp.dest('build/js'));
 });
 
 
@@ -107,6 +109,7 @@ gulp.task('refresh', function (done) {
   server.reload();
   done();
 });
+
 
 gulp.task('build', gulp.series('clean', 'sprite', 'copy', 'css', 'script', 'html'));
 gulp.task('image', gulp.series('images', 'webp'));

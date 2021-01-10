@@ -67,7 +67,7 @@
   @include text-sets(25px, 32px, 600);
   color: #141517;
   text-align: center;
-  margin: 70px 0 5px;
+  margin: 0 0 5px;
 
   @media (max-width: $width-desktop) {
     font-size: 25px;
@@ -102,11 +102,10 @@
   left: 0;
   margin: auto 42%;
   border-radius: 6px;
-  padding: 0 1%;
+  padding: 4% 1% 1%;
   width: 34%;
   box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
-  max-height: 315px;
-  box-sizing: border-box;
+  max-height: 235px;
   min-width: 579px;
 
   @media (max-width: $width-desktop) {
@@ -117,7 +116,7 @@
     box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
     border-radius: 5px;
     max-height: unset;
-    width: 90%;
+    width: 80%;
     min-width: unset;
   }
 

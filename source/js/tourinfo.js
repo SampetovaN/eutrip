@@ -22,6 +22,7 @@
 
       if (itemNewActive) {
         itemNewActive.classList.add(window.utils.ACTIVE_ITEM_TAG);
+        itemNewActive.focus();
       }
     };
 
